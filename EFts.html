@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     .E {
+            /* margin-left: 200px; */
+            font-size: 20px;
+            color: #171b22;
+            margin-right: 200px;
+        }
+        .Eheading {
+            font-size: 35px;
+            font-weight: bold;
+            color: #171b22;
+            background-color: beige;
+            width: fit-content;
+            margin-left: 100px;
+
+        }
+        .E p{
+            margin-left: 200px;
+        }
+
+        .disctopgainerE{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;
+        }
+        .discloserE{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;
+
+        }
+        
+
+        .discportfolioE{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;}
+
+
+            .discsectorE{
+            font-size: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+ header {
+           background-color: #171b22;
+           color: #fff;
+           padding: 15px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           font-family: 'Roboto', sans-serif;
+           margin-left: 25px;
+           margin-right: 25px;
+          margin-top: 7px;
+           
+
+       }
+
+       .header-top {
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           width: 100%;
+       }
+
+       .brand-name {
+           font-size: 44px;
+           font-weight: bold;
+           margin-left: 50px;
+         margin-top: 20px;
+       }
+
+       .search-container {
+           display: flex;
+           align-items: center;
+       }
+
+       .search-bar {
+           width: 500px;
+           height: 20px;
+           padding: 8px;
+           border: none;
+           border-radius: 4px;
+           margin-right: 400px;
+           /* align-item: center; */
+       }
+
+       .profile-icon {
+           width: 60px;
+           height: 30px; 
+           /* border-radius: 30%; */
+           background-color: #fff;
+           margin-right: 50px;
+           margin-top: 25px;
+           color: #000;
+           font-size: 25px;
+       }
+
+       .categories1 {
+           background-color: rgb(215, 211, 206);
+           color: #000;
+           width: 90%;
+           margin-top: 15px;
+           border-radius: 50px;
+           margin-left: 50px;
+           margin-right: 50px;
+       }
+
+
+       .categories {
+           list-style: none;
+           padding-left: 40px;
+           padding-right: 40px;
+           display: flex;
+           height: 10px;
+           margin-top: 10px;
+           flex-direction: row;
+           justify-content: center;
+       }
+
+
+       .categories li {
+           padding-right: 2.8%;
+       }
+       .categories li a {
+           text-decoration: none;
+           color: #000000;
+           border-radius: 15px;
+           margin-right: 20px;
+           background-color:white;
+           display: inline-block;
+           width: 100px;
+           text-align: center;
+          
+          
+       }
+
+
+
+
+       .categories li a:hover {
+           background-color: #565454;
+           color: #fff;
+           transition: background-color 0.3s; 
+           transition: color 0.3s; 
+       }
+
+       
+       #selected {
+           background-color: rgb(6, 6, 6);
+           color: #fff;
+       }
+
+       nav {
+     background-color: #171b22;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     height: 50px;
+   }
+
+   nav ul {
+       margin-top: 10px;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     
+   }
+
+   nav ul li {
+     margin: 0;
+     padding: 0;
+     padding-left: 30px;
+     padding-right: 30px;
+     margin-top:10px ;
+   }
+
+   nav ul li a {
+     display: block;
+     text-decoration: none;
+     color: white;
+     padding: 15px;
+     transition: background-color 0.3s; 
+   }
+
+   nav ul li a:hover {
+     background-color: #fbf9f9; 
+     color: #000000;
+     transition:color 0.3s;
+     transition:background-color 0.3s;
+   }
+   .topgainers{
+            margin-top :30px;
+            /* padding: 20px; */
+            font-size: 35px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+            /* margin-bottom: 30px; */
+        }
+        table {
+             border-collapse: collapse;
+            width: 80%;
+             padding-top: 10px; 
+             margin-top: 20px;
+            /* padding-left: 200px; */
+            padding-right: 100px;
+            font-size: 20px; 
+            margin-left: 200px;
+            background-color: #171b22; 
+
+            
+
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #171b22;
+        }
+
+        tr:nth-child(even) {
+            background-color: #3a3c3e;
+        }
+         .stock{
+            text-align: left;
+            color: green;
+         }
+         .green{
+            color: green;
+         }
+        
+         #black{
+            color:rgb(255, 251, 251);
+         }
+
+        .toplosers{
+            margin-top :30px;
+            /* padding: 20px; */
+            font-size: 35px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+            /* margin-bottom: 30px; */
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            color: red;
+        }
+        th{ 
+            color:white;
+            
+        }
+
+        th {
+            background-color: #171b22;
+        }
+
+        td.price {
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #3a3c3e;
+        }
+
+        tr.header-row {
+            color: white;
+        }
+        .left{
+            text-align: left;
+        }
+
+        .sectors{
+            font-size: 35px;
+            margin-top: 30px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+            /* margin-bottom: 30px; */
+         }
+
+         .portfolio1{
+            margin-left: 100px;
+            font-size: 33px;
+            font-weight: bold;
+            background-color: beige;
+            width:fit-content;
+            margin-top: 30px;
+            /* margin-bottom: 30px; */
+        }
+
+
+
+
+
+
+   
+
+
+
+
+   .footer-container{
+            width: 98%;
+            margin: auto;
+           background-color: #171b22;
+           color: white;margin-top: 40px;
+           height: 450px;
+        }
+       
+        .column {
+            float: left;
+            padding: 10px;
+            height: 400px;
+        }
+
+
+        .footer-container:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .left {
+            width: 12%;
+        }
+        .left h2 {
+            margin-top: 5px;
+            margin-left: 12px;
+        }
+
+
+        .center {
+            width: 80%;
+        }
+
+
+        .right {
+            width: 8%;
+        }
+
+
+        hr.new {
+            border: 1.5px solid white;
+            margin-top: 2px;
+        }
+
+
+        .footer-info2 {
+            height: 280px;
+            display: grid;
+            grid-template-columns: 300px 170px 170px 170px 300px;
+        }
+
+
+        .footer-info3 {
+            height: 90px;
+        }
+
+
+        .footer-info3 .column{
+            float: left;
+        }
+
+
+        .footer-info3:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .footer-info3-findus{
+            margin-left: 20px;
+            width: 20%;
+        }
+
+
+        .footer-info3-support{
+            width: 70%;
+        }
+
+
+        .footer-info-col1{
+            font-size: 14px;
+            margin-right: 30px;
+        }
+
+
+        .footer-info-col1 h2{
+            font-size: 30px;
+        }
+
+
+        .footer-info-col2-list, .footer-info-col3-list, .footer-info-col4-list, .footer-info-col5-list{
+            list-style-type: none;
+            font-size: 14px;
+            margin-top: 40px;
+           
+        }
+
+
+        .footer-info-col2-list li, .footer-info-col3-list li, .footer-info-col4-list li, .footer-info-col5-list li{
+           padding: 10px;
+        }
+</Style>
+<body>
+    <header id=navbar>
+        <div class="header-top">
+            <span class="brand-name">Tips Takers</span>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search">
+                <div> <a href="index.html" class="profile-icon"> Login </a></div>
+            </div>
+        </div>
+        <div class="categories1">
+        <ul class="categories">
+            <li  > <a href="home.html" >Home</a></li>
+            <li >  <a href="stocks.html"   >stocks</a></li>
+            <li > <a href="MutualF.html" >MutualF</a></li>
+            <li > <a href="Indices.html">Indices</a></li>
+            <li > <a href="EFts.html" id="selected">EFts</a></li>
+            <li > <a href="crypto.html">Crypto</a></li>
+            <li> <a href="#footer">Moreservics</a></li>
+        </ul>
+        </div>
+        <nav>
+            <ul>
+              <li><a href="#topgainers">Top Gainers</a></li>
+              <li><a href="#toplosers" >Top Losers</a></li>
+              <li><a href="#sectors">Sectors</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+          </nav>
+    </header>
+    <div class="E">
+        <h1 class="Eheading">EFTs</h1><p>
+        <b>Creation and Redemption:</b>  ETFs can be created or redeemed by authorized participants, maintaining a balance between supply and demand. This creation/redemption process keeps the ETF's market price closely aligned with the net asset value (NAV) of its underlying assets.<br>
+    <br>
+    <b>Intraday Trading:</b>  ETFs trade on exchanges throughout the day, allowing investors to buy or sell at market prices. This flexibility enables traders to react quickly to market movements or changing conditions.<br>
+    <br>
+    <b>Variety of Investment Strategies:</b> ETFs cover a wide range of investment strategies, including passive indexing, actively managed funds, leveraged or inverse funds, and thematic funds focusing on specific industries or trends.<br>
+    <br>
+    <b>Risk and Volatility:</b> Just like any investment, ETFs carry risks. Depending on the underlying assets, they can be subject to market fluctuations, interest rate changes, or specific sector risks.<br>
+    <br>
+    <b>Income Generation: </b>Some ETFs aim to provide regular income through dividends or interest from the underlying assets, making them attractive for income-focused investors.<br>
+    <br>
+    <b>Specialized Exposure:</b> ETFs exist for specific regions, industries, sectors, or strategies, allowing investors to gain exposure to niche markets that might not be easily accessible otherwise.<br>
+    <br>
+    <b>Reinvestment of Dividends:</b> Many ETFs automatically reinvest dividends back into the fund, potentially benefiting from compound growth over time.<br>
+    <br>
+    <b>Tax Efficiency:</b> Due to the creation and redemption mechanism and specific tax treatment, ETFs can be tax-efficient compared to other investment vehicles like mutual funds.<br>
+    <br>
+    </p></div>
+    <div class="topgainers" ID="topgainers"> Top gainers</div>
+   
+<p class="disctopgainerE">
+    <b>Top gainers </b>  in Exchange-Traded Funds (ETFs) represent funds that have experienced significant price increases over a specific period. They attract attention due to their strong returns, often driven by the performance of underlying assets, market trends, or specific sectors. Investors monitor these top gainers for potential high returns, influenced by market sentiment, sector-specific performance, global trends, or the strategies of actively managed funds. However, it's crucial to conduct thorough research, consider associated risks, and evaluate the sustainability of the gains before considering investment in these ETFs.</p> 
+   
+    <table>
+        <tr>
+            <th class="stock" id="black">Trade</th>
+            <th id="black">Price</th>
+            <th id="black">Change</th>
+            <th id="black">Change %</th>
+        </tr>
+        <tr>
+            <td class="stock" >01 Dunamatech</td>
+            <td id="black">975.70</td>
+            <td class="green">162.60</td>
+            <td class="green">20.00</td>
+        </tr>
+        <tr>
+            <td class="stock">02 Hisarmetal</td>
+            <td id="black">111.00</td>
+            <td class="green">18.40</td>
+            <td class="green">19.87</td>
+        </tr>
+        <tr>
+            <td class="stock">03 Spipll</td>
+            <td id="black">35.70</td>
+            <td class="green">4.90</td>
+            <td class="green">15.82</td>
+        </tr>
+        <tr>
+            <td class="stock">04 Star</td>
+            <td id="black">852.35</td>
+            <td class="green">108.75</td>
+            <td class="green">14.35</td>
+        </tr>
+        <tr>
+            <td class="stock">05 Wabcoindia</td>
+            <td id="black">6390.30</td>
+            <td class="green">747.10</td>
+            <td class="green">13.24</td>
+        </tr>
+        <tr>
+            <td class="stock">06 Sakkar</td>
+            <td id="black">108.30</td>
+            <td class="green">12.45</td>
+            <td class="green">12.99</td>
+        </tr>
+        <tr>
+            <td class="stock">07 Dynpro</td>
+            <td id="black">523.00</td>
+            <td class="green">55.45</td>
+            <td class="green">11.86</td>
+        </tr>
+        <tr>
+            <td class="stock">08 FibIndia</td>
+            <td id="black">1093.85</td>
+            <td class="green">108.10</td>
+            <td class="green">10.97</td>
+        </tr>
+        <tr>
+            <td class="stock">09 Seamecltd</td>
+            <td id="black">499.80</td>
+            <td class="green">41.45</td>
+            <td class="green">10.16</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: left;"><a href="#" id="black">See more...</a></td>
+        </tr>
+    </table>
+
+
+
+<div class="toplosers" id="toplosers"> Toplosers </div>
+<div class="discloserE"> 
+    <p><b>Top losers </b> in Exchange-Traded Funds (ETFs) are funds that have experienced significant declines in their prices over a specific period. These ETFs attract attention due to their poor performance, often influenced by various factors like underperformance of underlying assets, adverse market conditions, or sector-specific setbacks. Investors closely monitor these top losers to understand market dynamics, but it's vital to conduct thorough research, consider associated risks, and assess the reasons behind the declines before making investment decisions.</p></div>
+<table>
+    <tr class="header-row">
+        <th class="left">Trade</th>
+        <th>Price</th>
+        <th>Change</th>
+        <th>Change %</th>
+    </tr>
+    <tr>
+        <td class="left">Gtl</td>
+        <td class="price">416.85</td>
+        <td>28.20</td>
+        <td>92.00</td>
+    </tr>
+    <tr>
+        <td class="left">Ks oils</td>
+        <td class="price">762</td>
+        <td>176.95</td>
+        <td>87.87</td>
+    </tr>
+    <tr>
+        <td class="left">Lanco Infratech</td>
+        <td class="price">100.49</td>
+        <td>23.65</td>
+        <td>85.82</td>
+    </tr>
+    <tr>
+        <td class="left">Ivrcl</td>
+        <td class="price">302.55</td>
+        <td>73.75</td>
+        <td>78.35</td>
+    </tr>
+    <tr>
+        <td class="left">Jet Airways</td>
+        <td class="price">140.69</td>
+        <td>34.70</td>
+        <td>76.24</td>
+    </tr>
+    <tr>
+        <td class="left">Bajaj Hind</td>
+        <td class="price">725.95</td>
+        <td>179.30</td>
+        <td>76.99</td>
+    </tr>
+    <tr>
+        <td class="left">Patel Engg</td>
+        <td class="price">97.50</td>
+        <td>24.05</td>
+        <td>75.86</td>
+    </tr>
+    <tr>
+        <td class="left">NCC</td>
+        <td class="price">40.65</td>
+        <td>10.10</td>
+        <td>75.97</td>
+    </tr>
+    <tr>
+        <td class="left">BGR Energy</td>
+        <td class="price">66.80</td>
+        <td>17.70</td>
+        <td>73.16</td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align: left;">
+            <a href="#" style="color: white;">See more..</a>
+        </td>
+    </tr>
+</table>
+
+
+
+
+<div class="sectors" id="sectors"> Sectors perfomance </div>
+<p class="discsectorE"> 
+    <b>Top sectors</b> in Exchange-Traded Funds (ETFs) represent specific industries or segments within the market that have shown considerable performance. ETFs focusing on these sectors attract attention due to their strong returns, often reflecting the success and growth of the industries they track. Investors monitor these top sectors to gain exposure to specific industries or market segments, seeking diversification and potential high returns. However, it's important for investors to conduct research, understand the sector's prospects, and consider associated risks before investing in these ETFs.
+
+<div class="portfolio1"id=portfolio>
+Portfolio
+</div>
+<p class="discportfolioE"> 
+    <b> ETF portfolios </b> 
+   involve assembling a collection of Exchange-Traded Funds that mirror specific market indices or segments. These portfolios offer diversification by spreading investments across various sectors or asset classes. They cater to specific investment strategies, providing flexibility and accessibility to a broad range of market themes. Typically, they follow a passive investing approach to match market returns, offering lower management fees. The tradability and transparency of ETFs make portfolio management efficient, allowing investors to adjust their holdings based on market conditions and objectives. However, constructing and managing these portfolios require thorough research and alignment with investment goals.
+
+
+
+
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="column left">
+                <h2> <a href="#navbar"> Top ^ </a></h2>
+            </div>
+            <div class="column center">
+                <div class="footer-info1">
+                    <hr class="new">
+                </div>
+                <div class="footer-info2">
+                    <div class="footer-info-col1">
+                        <h2>TipsTakers</h2>
+                        <p>Tips taker provides data, information & content
+                            for indian stock market, crytpo, mutual funds ,
+                            ETFs & indices </p>
+                            <p>A11 , pragati Appartments,<br>
+                            near dehu phata, Mitaoe, Pune <br>
+                            425508</p>
+                    </div>
+                    <div class="footer-info-col2">
+                        <ul class="footer-info-col2-list">
+                            <li>Assets</li>
+                            <li>Stocks</li>
+                            <li>Mutus Funds</li>
+                            <li>Small cap</li>
+                        </ul>
+                    </div>
+                    <div class="footer-info-col3">
+                        <ul class="footer-info-col3-list">
+                            <li>Tools</li>
+                            <li>MMI</li>
+                            <li>StockScreener</li>
+                            <li>MF Screeener</li>
+                            <li>Stocks Deal</li>
+                        </ul>
+                    </div>
+                    <div class="footer-info-col4">
+                        <ul class="footer-info-col4-list">
+                            <li>Learn&share</li>
+                            <li>Social</li>
+                            <li>Learn</li>
+                            <li>Blog</li>
+                            <li>Glossary</li>
+                          </ul>
+                    </div>
+                    <div class="footer-info-col5">
+                        <ul class="footer-info-col5-list">
+                            <li>Fine prints</li>
+                            <li>Pricing</li>
+                            <li>Disclousure</li>
+                            <li>Term & Condition</li>
+                            <li>Privacy Policy</li>
+                            <li>Analytics & Information Tool</li>
+                            <li>Community Guidelines</li>
+                     </ul>
+                    </div>
+    
+    
+                </div>
+                <div class="footer-info3">
+                    <div class="column footer-info3-findus">
+                        <p>Find Us on</p>
+                    </div>
+                    <div class="column footer-info3-support">
+                        <p>Support</p>
+                        <p>Tipstaker@101gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column right">
+              </div>
+          </div>
+      </footer>
+    
+</body>
+</html>

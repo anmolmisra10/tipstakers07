@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <style>
+    header {
+           background-color: #171b22;
+           color: #fff;
+           padding: 15px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           font-family: 'Roboto', sans-serif;
+           margin-left: 25px;
+           margin-right: 25px;
+          margin-top: 7px;
+           
+
+       }
+
+       .header-top {
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           width: 100%;
+       }
+
+       .brand-name {
+           font-size: 44px;
+           font-weight: bold;
+           margin-left: 50px;
+         margin-top: 20px;
+       }
+
+       .search-container {
+           display: flex;
+           align-items: center;
+       }
+
+       .search-bar {
+           width: 500px;
+           height: 20px;
+           padding: 8px;
+           border: none;
+           border-radius: 4px;
+           margin-right: 400px;
+           /* align-item: center; */
+       }
+
+       .profile-icon {
+           width: 60px;
+           height: 30px; 
+           /* border-radius: 30%; */
+           background-color: #fff;
+           margin-right: 50px;
+           margin-top: 20px;
+           color: #000;
+           font-size: 25px;
+       }
+
+       .categories1 {
+           background-color: rgb(215, 211, 206);
+           color: #000;
+           width: 90%;
+           margin-top: 15px;
+           border-radius: 50px;
+           margin-left: 50px;
+           margin-right: 50px;
+       }
+
+
+       .categories {
+           list-style: none;
+           padding-left: 40px;
+           padding-right: 40px;
+           display: flex;
+           height: 10px;
+           margin-top: 10px;
+           flex-direction: row;
+           justify-content: center;
+       }
+
+
+       .categories li {
+           padding-right: 2.8%;
+       }
+       .categories li a {
+           text-decoration: none;
+           color: #000000;
+           border-radius: 15px;
+           margin-right: 20px;
+           background-color:white;
+           display: inline-block;
+           width: 100px;
+           text-align: center;
+          
+          
+       }
+
+
+
+
+       .categories li a:hover {
+           background-color: #565454;
+           color: #fff;
+           transition: background-color 0.3s; 
+           transition: color 0.3s; 
+       }
+
+       
+       #selected {
+           background-color: rgb(6, 6, 6);
+           color: #fff;
+       }
+
+       /* nav {
+     background-color: #171b22;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     height: 50px;
+   }
+
+   nav ul {
+       margin-top: 10px;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     
+   }
+
+   nav ul li {
+     margin: 0;
+     padding: 0;
+     padding-left: 30px;
+     padding-right: 30px;
+     margin-top:10px ;
+   }
+
+   nav ul li a {
+     display: block;
+     text-decoration: none;
+     color: white;
+     padding: 15px;
+     transition: background-color 0.3s; 
+   }
+
+   nav ul li a:hover {
+     background-color: #fbf9f9; 
+     color: #000000;
+     transition:color 0.3s;
+     transition:background-color 0.3s;
+   } */
+
+
+       
+       
+    /* body {
+      font-family: Arial, sans-serif;
+      
+     
+      padding: 20px;
+    } */
+
+    .content {
+      width: 90%;
+      padding: 40px;
+      margin-left :100px;
+      margin-top: 40px;
+      
+
+      
+    }
+    .content:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    
+    .column{
+        float: left;
+    }
+    .mainlist{
+        width:35%;
+        margin-top: -30px;
+    }
+.imagemobile{
+    width:60%;
+    margin-right: 10px;
+    
+    
+}
+    .content h1 {
+
+      margin-bottom: 10px;
+      margin-left :0px;
+      font-size: 45px;
+      background-color: antiquewhite;
+      max-width: fit-content;
+    }
+
+    .content ul {
+      list-style: none;
+      padding: 0;
+      margin-left :0px;
+
+    }
+
+    .content ul li {
+      margin-bottom: 5px;
+    }
+    .list{
+        margin-top: 20px;
+        font-size: 30px;
+    }
+   .list a :hover {
+      text-decoration: underline;
+      color: #c31b1b;
+    }
+
+
+    /* .button {
+      padding: 30px;
+    } */
+
+    .button a {
+      display: inline-block;
+      height :40px;
+      width: 300px;
+     text-align: center;
+      padding:  10px;
+      text-decoration: none;
+      background-color: #171b22;
+      color: white;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      /* margin-left :0px; */
+      font-size: 25px;
+      /* padding-bottom:0px; */
+      padding-top: 20px;
+     
+      
+    }
+
+    .button a:hover {
+      background-color: #32cffb;
+    }
+
+    .image {
+      width: 50%;
+      text-align: center;
+    }
+    .hr1{
+        width:70%;
+        align-content: center;
+        border: 1px solid black;
+        margin-top: 70px;
+    }
+
+    .disc{
+      font-size:20px;
+      color: #171b22;
+      margin-left: 200px;
+      margin-right: 200px;
+    }
+    
+    .container {
+    width: 100%;
+      max-width: 1200px;
+      background-color: #171b22;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .subscription-box {
+      width: 23%;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    .subscription-box h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .subscription-box ul {
+      list-style: none;
+      padding: 0;
+      font-size: 18px;
+      text-align: left;
+      padding:10px
+    
+    }
+    .space{
+        padding: 10px;
+    }
+.subscriptions{
+    margin-top: 60px;
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 140px;
+    background-color: antiquewhite;
+    max-width: fit-content;
+}   
+.footer-container{
+            width: 98%;
+            margin: auto;
+           background-color: #171b22;
+           color: white;margin-top: 40px;
+           height:450px;
+        }
+       
+        .column {
+            float: left;
+            padding: 10px;
+            height: 400px;
+        }
+
+
+        .footer-container:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .left {
+            width: 12%;
+        }
+        .left h2 {
+            margin-top: 5px;
+            margin-left: 12px;
+        }
+
+
+        .center {
+            width: 80%;
+        }
+
+
+        .right {
+            width: 8%;
+        }
+
+
+        hr.new {
+            border: 1.5px solid white;
+            margin-top: 2px;
+        }
+
+
+        .footer-info2 {
+            height: 280px;
+            display: grid;
+            grid-template-columns: 300px 170px 170px 170px 300px;
+        }
+
+
+        .footer-info3 {
+            height: 90px;
+        }
+
+
+        .footer-info3 .column{
+            float: left;
+        }
+
+
+        .footer-info3:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .footer-info3-findus{
+            margin-left: 20px;
+            width: 20%;
+        }
+
+
+        .footer-info3-support{
+            width: 70%;
+        }
+
+
+        .footer-info-col1{
+            font-size: 14px;
+            margin-right: 30px;
+        }
+
+
+        .footer-info-col1 h2{
+            font-size: 30px;
+        }
+
+
+        .footer-info-col2-list, .footer-info-col3-list, .footer-info-col4-list, .footer-info-col5-list{
+            list-style-type: none;
+            font-size: 14px;
+            margin-top: 40px;
+           
+        }
+
+
+        .footer-info-col2-list li, .footer-info-col3-list li, .footer-info-col4-list li, .footer-info-col5-list li{
+           padding: 10px;
+        }
+
+    
+  </style>
+</head>
+<body>
+  <header id=navbar>
+    
+    <div class="header-top">
+        <span class="brand-name">Tips Takers</span>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search">
+            <div> <a href="index.html" class="profile-icon"> Login </a></div>
+        </div>
+    </div>
+    <div class="categories1">
+    <ul class="categories">
+        <li  > <a href="home.html" id="selected">Home</a></li>
+        <li >  <a href="stocks.html"   >stocks</a></li>
+        <li > <a href="MutualF.html">MutualF</a></li>
+        <li > <a href="Indices.html">Indices</a></li>
+        <li > <a href="EFts.html">EFts</a></li>
+        <li > <a href="crypto.html">Crypto</a></li>
+        <li> <a href="#footer">Moreservics</a></li>
+    </ul>
+    </div>
+    <!-- <nav>
+        <ul>
+          <li><a href="#topgainers">Top Gainers</a></li>
+          <li><a href="#toplosers" >Top Losers</a></li>
+          <li><a href="#sectors">Sectors</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+      </nav> -->
+</header>
+  <div class="content">
+    <div class="column mainlist"> 
+    <h1>What we provide</h1>
+    <ul >
+      <li class="list" >  01 : Overview </li>
+      <li class="list" >02 : Good returns</li>
+      <li class="list" >03 : Per-share data</li>
+      <li class="list" >04 : Valuation</li>
+      <li class="list" >05 : Custom view</li>
+      <li class="list" > 06 : Up-to-date news</li>
+    </ul>
+    <div class="button">
+      <a href="upstocks.com">Connect Portfolio</a>
+   
+    </div>
+    </div>
+  
+    <img class="column imagemobile"src="https://corp.smartbrief.com/wp-content/uploads/2020/05/AdobeStock_295042621-scaled.jpeg" alt="Sample Image">
+</div>
+
+<hr class="hr1">
+
+<div  class="subscriptions"> Subscriptions</div>
+<div class="disc"> <p> Unlock exclusive insights with our diverse subscription plans. Gain access to a range of expertly curated content, market analysis, personalized recommendations, and real-time updates. Choose from our tailored subscription options designed to meet your investment goals, whether you're a novice investor seeking guidance or an experienced trader in search of advanced strategies. Elevate your decision-making with our subscription plans, offering invaluable resources and tools to stay ahead in the financial markets."
+
+  This description aims to highlight the diverse benefits and features that your advisory website's subscription plans offer to potential users, emphasizing the value and customized support available across different levels of expertise in investing.</p></div>
+<div class="container">
+    <div class="subscription-box">
+      <h3>1999/-</h3>
+      <ul>
+        <li class="space">1. Stocks</li>
+        <li class="space">2. Mutual Funds</li>
+      </ul>
+    </div>
+    <div class="subscription-box">
+      <h3>2999/-</h3>
+      <ul>
+        <liclass="space">1. Stocks</li>
+        <li class="space">2. Mutual Funds</li>
+        <li class="space">3. Advance News</li>
+        <li v>4. Live Trading</li>
+      </ul>
+    </div>
+    <div class="subscription-box">
+      <h3>3999/-</h3>
+      <ul>
+        <li class="space">1. Stocks</li>
+        <li class="space">2. Mutual Funds</li>
+        <li class="space">3. Advance News</li>
+        <li class="space">4. Live Trading</li>
+        <li class="space">5. Portfolio Management</li>
+      </ul>
+    </div>
+    <div class="subscription-box">
+      <h3>4999/-</h3>
+      <ul>
+        <li class="space">1. Stocks</li>
+        <li class="space">2. Mutual Funds</li>
+        <li class="space">3. Advance News</li>
+        <li class="space">4. Live Trading</li>
+        <li class="space">5. Portfolio Management</li>
+        <li  class="space" >6. Expert Advices</li>
+      </ul>
+    </div>
+  </div>
+  <footer id="footer" >
+    <div class="footer-container">
+        <div class="column left">
+          <h2> <a href="#navbar"> Top ^ </a></h2>
+        </div>
+        <div class="column center">
+            <div class="footer-info1">
+                <hr class="new">
+            </div>
+            <div class="footer-info2">
+                <div class="footer-info-col1">
+                    <h2>TipsTakers</h2>
+                    <p>Tips taker provides data, information & content
+                        for indian stock market, crytpo, mutual funds ,
+                        ETFs & indices </p>
+                        <p>A11 , pragati Appartments,<br>
+                        near dehu phata, Mitaoe, Pune <br>
+                        425508</p>
+                </div>
+                <div class="footer-info-col2">
+                    <ul class="footer-info-col2-list">
+                        <li>Assets</li>
+                        <li>Stocks</li>
+                        <li>Mutus Funds</li>
+                        <li>Small cap</li>
+                    </ul>
+                </div>
+                <div class="footer-info-col3">
+                    <ul class="footer-info-col3-list">
+                        <li>Tools</li>
+                        <li>MMI</li>
+                        <li>StockScreener</li>
+                        <li>MF Screeener</li>
+                        <li>Stocks Deal</li>
+                    </ul>
+                </div>
+                <div class="footer-info-col4">
+                    <ul class="footer-info-col4-list">
+                        <li>Learn&share</li>
+                        <li>Social</li>
+                        <li>Learn</li>
+                        <li>Blog</li>
+                        <li>Glossary</li>
+                      </ul>
+                </div>
+                <div class="footer-info-col5">
+                    <ul class="footer-info-col5-list">
+                        <li>Fine prints</li>
+                        <li>Pricing</li>
+                        <li>Disclousure</li>
+                        <li>Term & Condition</li>
+                        <li>Privacy Policy</li>
+                        <li>Analytics & Information Tool</li>
+                        <li>Community Guidelines</li>
+                 </ul>
+                </div>
+
+
+            </div>
+            <div class="footer-info3">
+                <div class="column footer-info3-findus">
+                    <p>Find Us on</p>
+                </div>
+                <div class="column footer-info3-support">
+                    <p>Support</p>
+                    <p>Tipstaker@101gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="column right">
+          </div>
+      </div>
+  </footer>
+
+</body>
+</html>

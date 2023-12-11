@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .C {
+            /* margin-left: 200px; */
+            font-size: 20px;
+            color: #171b22;
+            margin-right: 200px;
+        }
+        .Cheading {
+            font-size: 35px;
+            font-weight: bold;
+            color: #171b22;
+            background-color: beige;
+            width: fit-content;
+            margin-left: 100px;
+
+        }
+        .C p{
+            margin-left: 200px;
+        }
+
+        .CG{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;
+        }
+        .CL{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;
+
+        }
+        
+
+        .CP{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;}
+
+
+            .CS{
+            font-size: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        /* Style for the header */
+        header {
+           background-color: #171b22;
+           color: #fff;
+           padding: 15px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           font-family: 'Roboto', sans-serif;
+           margin-left: 25px;
+           margin-right: 25px;
+          margin-top: 7px;
+           
+
+       }
+
+       .header-top {
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           width: 100%;
+       }
+
+       .brand-name {
+           font-size: 44px;
+           font-weight: bold;
+           margin-left: 50px;
+         margin-top: 20px;
+       }
+
+       .search-container {
+           display: flex;
+           align-items: center;
+       }
+
+       .search-bar {
+           width: 500px;
+           height: 20px;
+           padding: 8px;
+           border: none;
+           border-radius: 4px;
+           margin-right: 400px;
+           /* align-item: center; */
+       }
+
+       .profile-icon {
+           width: 60px;
+           height: 30px; 
+           /* border-radius: 30%; */
+           background-color: #fff;
+           margin-right: 50px;
+           margin-top: 20px;
+           color: #000;
+           font-size: 25px;
+       }
+
+       .categories1 {
+           background-color: rgb(215, 211, 206);
+           color: #000;
+           width: 90%;
+           margin-top: 15px;
+           border-radius: 50px;
+           margin-left: 50px;
+           margin-right: 50px;
+       }
+
+
+       .categories {
+           list-style: none;
+           padding-left: 40px;
+           padding-right: 40px;
+           display: flex;
+           height: 10px;
+           margin-top: 10px;
+           flex-direction: row;
+           justify-content: center;
+       }
+
+
+       .categories li {
+           padding-right: 2.8%;
+       }
+       .categories li a {
+           text-decoration: none;
+           color: #000000;
+           border-radius: 15px;
+           margin-right: 20px;
+           background-color:white;
+           display: inline-block;
+           width: 100px;
+           text-align: center;
+          
+          
+       }
+
+
+
+
+       .categories li a:hover {
+           background-color: #565454;
+           color: #fff;
+           transition: background-color 0.3s; 
+           transition: color 0.3s; 
+       }
+
+       
+       #selected {
+           background-color: rgb(6, 6, 6);
+           color: #fff;
+       }
+
+       nav {
+     background-color: #171b22;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     height: 50px;
+   }
+
+   nav ul {
+       margin-top: 10px;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     
+   }
+
+   nav ul li {
+     margin: 0;
+     padding: 0;
+     padding-left: 30px;
+     padding-right: 30px;
+     margin-top:10px ;
+   }
+
+   nav ul li a {
+     display: block;
+     text-decoration: none;
+     color: white;
+     padding: 15px;
+     transition: background-color 0.3s; 
+   }
+
+   nav ul li a:hover {
+     background-color: #fbf9f9; 
+     color: #000000;
+     transition:color 0.3s;
+     transition:background-color 0.3s;
+   }
+
+    .topgainers{
+            margin-top :30px;
+            /* padding: 20px; */
+            font-size: 35px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+        }
+
+        table {
+            margin-top :20px;
+            width: 75%;
+            border-collapse: collapse;
+            font-family: 'Arial', sans-serif;
+            margin-left:200px;
+            margin-left: 200px;
+            font-size: 20px;
+            
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            color: green;
+        }
+        .green{
+            color: green;
+        }
+        .green1{
+            text-align: center;
+            color: green;
+        }
+        .trade{
+            text-align: left;
+        }
+
+        th {
+            background-color: #171b22;
+            color: white;
+            text-align: center;
+        }
+
+        td.price {
+            color: white;
+            text-align: center;
+        }
+        td.change{
+            text-align: center;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #171b22;
+        }
+
+        tr:nth-child(even) {
+            background-color: #3a3c3e;
+        }
+
+    .toplosers{
+    margin-top :30px;
+            /* padding: 20px; */
+            font-size: 35px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+    }
+    .toplosers1{ margin-top :20px;
+            width: 75%;
+            border-collapse: collapse;
+            font-family: 'Arial', sans-serif;
+            margin-left:200px;
+            margin-right:200px;
+            font-size: 20px;
+
+    }
+    th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            /* color: red; */
+        }
+        .red{
+            color: red;
+        }
+        .red1{
+            text-align: center;
+            color: red;
+        }
+
+        th {
+            background-color: #171b22;
+            color: white;
+        }
+
+        td.price {
+            color: white;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #171b22;
+        }
+
+        tr:nth-child(even) {
+            background-color: #3a3c3e;
+        }
+        
+    
+    .perfomance{
+    margin-top :30px;
+            /* padding: 20px; */
+            font-size: 35px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+    }
+    .container {
+            width: 71.5%;
+            margin-left: 200px;
+            background-color: #171b22;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            width: 30%;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-tag {
+            color: white;
+            font-size: 26px;
+            margin-top: 10px;
+        }
+
+    .portfolio{
+            margin-left: 100px;
+            font-size: 33px;
+            font-weight: bold;
+            background-color: beige;
+            width:fit-content;
+            margin-top: 30px;
+        }
+    
+        .container12 {
+            margin-top: 30px;
+            width: 71.5%;
+            margin-left: 200px;
+            background-color: #171b22;
+           
+            /* align-items: center; */
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        .image1{
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            margin-left: 30px  
+        }
+
+        .image2{
+            max-width: 80%;
+            height: auto;
+            margin-top: 20px;
+            margin-left: 
+            0px;    
+        }
+
+        .image-tag1 {
+            color: rgb(3, 3, 3);
+         
+            margin-top: 20px;
+            font-size: 28px;
+            margin-bottom: 15px;
+            
+            background-color: beige;
+            width: fit-content;
+
+            
+        }
+        .image-tag2 {
+            color: rgb(1, 0, 0);
+         
+            margin-top: 20px;
+            font-size: 28px;
+            margin-bottom: 15px;
+              
+            background-color: beige;
+            width: fit-content; 
+        }
+
+
+
+        .footer-container{
+            width: 98%;
+            margin: auto;
+           background-color: #171b22;
+           color: white;margin-top: 40px;
+           height: 450px;
+        }
+       
+        .column {
+            float: left;
+            padding: 10px;
+            height: 400px;
+        }
+
+
+        .footer-container:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .left {
+            width: 12%;
+        }
+        .left h2 {
+            margin-top: 5px;
+            margin-left: 12px;
+        }
+
+
+        .center {
+            width: 80%;
+        }
+
+
+        .right {
+            width: 8%;
+        }
+
+
+        hr.new {
+            border: 1.5px solid white;
+            margin-top: 2px;
+        }
+
+
+        .footer-info2 {
+            height: 280px;
+            display: grid;
+            grid-template-columns: 300px 170px 170px 170px 300px;
+        }
+
+
+        .footer-info3 {
+            height: 90px;
+        }
+
+
+        .footer-info3 .column{
+            float: left;
+        }
+
+
+        .footer-info3:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .footer-info3-findus{
+            margin-left: 20px;
+            width: 20%;
+        }
+
+
+        .footer-info3-support{
+            width: 70%;
+        }
+
+
+        .footer-info-col1{
+            font-size: 14px;
+            margin-right: 30px;
+        }
+
+
+        .footer-info-col1 h2{
+            font-size: 30px;
+        }
+
+
+        .footer-info-col2-list, .footer-info-col3-list, .footer-info-col4-list, .footer-info-col5-list{
+            list-style-type: none;
+            font-size: 14px;
+            margin-top: 40px;
+           
+        }
+
+
+        .footer-info-col2-list li, .footer-info-col3-list li, .footer-info-col4-list li, .footer-info-col5-list li{
+           padding: 10px;
+        }
+
+    </style>
+    </head>
+    <body>
+    
+        <header id=navbar>
+            <div class="header-top">
+                <span class="brand-name">Tips Takers</span>
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search">
+                    <div> <a href="index.html" class="profile-icon"> Login </a></div>
+                </div>
+            </div>
+            <div class="categories1">
+            <ul class="categories">
+                <li  > <a href="home.html"  >Home</a></li>
+                <li >  <a href="stocks.html" >stocks</a></li>
+                <li > <a href="MutualF.html">MutualF</a></li>
+                <li > <a href="Indices.html">Indices</a></li>
+                <li > <a href="EFts.html">EFts</a></li>
+                <li > <a href="crypto.html" id="selected" >Crypto</a></li>
+                <li> <a href="#footer">Moreservics</a></li>
+            </ul>
+            </div>
+            <nav>
+                <ul>
+                  <li><a href="#topgainers">Top Gainers</a></li>
+                  <li><a href="#toplosers">Top Losers</a></li>
+                  <li><a href="#perfomance">Sectors</a></li>
+                  <li><a href="#portfolio">Portfolio</a></li>
+                </ul>
+              </nav>
+        </header>
+        <div class="C">
+            <h1 class="Cheading">Crypto</h1><p>
+            
+<b> Cryptocurrency</b> a digital or virtual form of currency, operates using decentralized technology called blockchain. It allows secure and transparent peer-to-peer transactions without the need for intermediaries like banks. Bitcoin, the first and most renowned cryptocurrency, introduced the concept in 2009. Since then, thousands of other cryptocurrencies, like Ethereum, Ripple, and Litecoin, have emerged.
+
+The volatility of cryptocurrencies leads to their adoption for investment, trading, and, to some extent, as a store of value. However, their value can fluctuate dramatically due to market speculation and sentiment. They're also gaining traction in various industries for their potential applications, such as smart contracts, decentralized finance (DeFi), and non-fungible tokens (NFTs). 
+        </p></div>
+
+        <div id="topgainers" class="topgainers">Topgainers</div>
+        <div class="CG">
+            <p>
+                In the realm of cryptocurrencies, top gainers are the digital assets that have experienced significant price increases within a specific period. These gainers often attract attention due to their substantial upward movements, frequently driven by market sentiment, investor speculation, technological advancements, or adoption in various industries.
+
+                Notably, certain cryptocurrencies have seen remarkable gains, sometimes due to innovative features, successful technological updates, or increased adoption. For instance, Ethereum, with its smart contract capabilities, and Binance Coin, utilized within the Binance ecosystem, have showcased substantial growth. Other tokens like Solana and Cardano have demonstrated impressive performances, partly due to their promising scalability and utility in decentralized applications.
+        
+        </p></div>
+
+        <table>
+            <tr>
+                <th class="trade" >Trade</th>
+                <th>Price</th>
+                <th>Change</th>
+                <th>Change %</th>
+            </tr>
+            <tr>
+                <td class="green">01: Wazir X</td>
+                <td class="price"  Class>80</td>
+                <td  class="green1"class="change1">872.60</td>
+                <td class="green1" class="change1">890</td>
+            </tr>
+            <tr>
+                <td class="green">02: WINk</td>
+                <td  class="price">117</td>
+                <td class="green1" class="change1">868.40</td>
+                <td class="green1" class="change1">484</td>
+            </tr>
+            <tr>
+                <td class="green" >03: Mco</td>
+                <td class="price">183.70</td>
+                <td class="green1" class="change1">4.90</td>
+                <td class="green1" class="change1">391</td>
+            </tr>
+            <tr>
+                <td class="green">04: Maro</td>
+                <td class="price">170</td>
+                <td class="green1" class="change1">48.75</td>
+                <td class="green1" class="change1">314</td>
+            </tr>
+            <tr>
+                <td class="green">Bit Torrent</td>
+                <td class="price">11.30</td>
+                <td class="green1" class="change1">817.10</td>
+                <td  class="green1"class="change1">26</td>
+            </tr>
+            <tr>
+                <td class="green">05: Medibloc</td>
+                <td class="price">110.30</td>
+                <td class="green1" class="change1">133.45</td>
+                <td class="green1" class="change1">198</td>
+            </tr>
+            <tr>
+                <td class="green">06: Holo</td>
+                <td class="price">29</td>
+                <td class="green1" class="change1">56.45</td>
+                <td class="green1" class="change1">115.81</td>
+            </tr>
+            <tr>
+                <td class="green">07: Tron</td>
+                <td class="price">17</td>
+                <td class="green1" class="change1">138.10</td>
+                <td  class="green1"class="change1">107</td>
+            </tr>
+            <tr>
+                <td class="green">08: Just</td>
+                <td class="price">148.80</td>
+                <td class="green1" class="change1">401.45</td>
+                <td class="green1" class="change1">95 48</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: left;">
+                    <a href="#" style="color: rgb(253, 254, 255);">See more..</a>
+                </td>
+            </tr>
+        </table>
+        
+
+        <div  id="toplosers" class="toplosers"> Toplosers </div>
+        <div class="CL">
+            <p>
+                
+In the cryptocurrency market, top losers represent digital assets that have undergone significant price declines within a specific timeframe. These top losers attract attention due to their notable downward movements, often influenced by market volatility, external factors, or specific circumstances affecting a particular cryptocurrency.
+
+Cryptocurrencies, renowned for their volatility, can witness substantial price swings due to a range of factors such as regulatory announcements, market sentiment shifts, technological setbacks, or lack of adoption. Some cryptocurrencies experience notable losses following adverse news, security breaches, or fluctuations in trading volumes.
+
+Certain tokens have faced considerable price drops, such as those lacking long-term viability, scalability issues, or insufficient community support. For instance, lesser-known or newly introduced coins might encounter rapid declines due to their vulnerability to market sentiment or external events.</p></div>
+        <table class="toplosers1">
+            <tr>
+                <th class="trade" >Trade</th>
+                <th>Price</th>
+                <th>Change</th>
+                <th>Change %</th>
+            </tr>
+            <tr>
+                <td class="red">01:Agrolot</td>
+                <td class="price">17.85</td>
+                <td class="red1">28.20</td>
+                <td class="red1">132.00</td>
+            </tr>
+            <tr>
+                <td class="red">02:Octoin Coin</td>
+                <td class="price">70.7</td>
+                <td class="red1">176.95</td>
+                <td class="red1">219.87</td>
+            </tr>
+            <tr>
+                <td class="red">03:Bezop</td>
+                <td class="price">0.6</td>
+                <td class="red1">23.65</td>
+                <td class="red1">132.82</td>
+            </tr>
+            <tr>
+                <td class="red">04:Optitoken</td>
+                <td class="price">88</td>
+                <td class="red1">73.75</td>
+                <td class="red1">61.35</td>
+            </tr>
+            <tr>
+                <td class="red">05:Bitcoin</td>
+                <td class="price">0.1</td>
+                <td class="red1">34.70</td>
+                <td class="red1">51.24</td>
+            </tr>
+            <tr>
+                <td class="red">06:Air Wire</td>
+                <td class="price">0.8</td>
+                <td class="red1">179.30</td>
+                <td class="red1">45.99</td>
+            </tr>
+            <tr>
+                <td class="red">07:Xcel Token</td>
+                <td class="price">0.4</td>
+                <td class="red1"> 24.05</td>
+                <td  class="red1">35.86</td>
+            </tr>
+            <tr>
+                <td class="red">08:Playcoin</td>
+                <td class="price">0.4</td>
+                <td class="red1">10.10</td>
+                <td class="red1">75.97</td>
+            </tr>
+            <tr>
+                <td class="red">09:vencoin</td>
+                <td class="price">0.9</td>
+                <td class="red1">17.70</td>
+                <td class="red1">73.16</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: left;">
+                    <a href="#" style="color: rgb(250, 250, 250);">See more..</a>
+                </td>
+            </tr>
+        </table>
+        <Div id="sectorperfomance" class="perfomance"> Sector Perfomance </Div>
+        <div class="CS">
+            <p>
+                In the realm of cryptocurrency, sectors refer to different categories or specialized areas within the digital asset space. These sectors represent various segments of the blockchain and crypto ecosystem, each with its distinct functionalities and applications. Key sectors include decentralized finance (DeFi), non-fungible tokens (NFTs), infrastructure projects, privacy coins, and utility tokens.
+
+                DeFi platforms enable financial services without traditional intermediaries, providing lending, borrowing, and trading through smart contracts. NFTs represent unique digital assets, from art to collectibles, utilizing blockchain technology to establish ownership and provenance. Infrastructure projects focus on enhancing the underlying technology, improving scalability, speed, and security.
+                
+                Privacy coins prioritize anonymity and security in transactions, aiming to protect user identities. Utility tokens offer access to specific products or services within their associated platforms.
+        </p></div>
+        <div class="container">
+            <div class="image-container">
+                <img src="https://www.lavivienpost.com/wp-content/uploads/2023/04/GPT3-datasets.jpg" alt="Payment crypto">
+                <div class="image-tag">Payment crypto</div>
+            </div>
+            <div class="image-container">
+                <img src="https://industryexpertsresearch.files.wordpress.com/2018/01/global-natural-vitamin-e-market-2024-by-end-use-application.jpg" alt="Stable cryptocurrency">
+           
+
+         
+            <div class="image-tag">Stable cryptocurrency</div>
+        </div>
+            <div class="image-container">
+                <img src="https://www.researchnester.com/admin/report_image/Global-Automated-Tow-Tractor-Market-Share.jpg" alt="Central bank currencies">
+            
+                <div class="image-tag">Central bank currencies</div>
+            </div>
+           
+        </div>
+
+        <div class="portfolio" id="portfolio"> Portfolio</div>
+        <div class="CP">
+            <p>
+                In the realm of cryptocurrency, a crypto portfolio is a collection of digital assets assembled to represent a diverse and balanced investment strategy. It includes a selection of cryptocurrencies, tokens, or assets aimed at providing exposure to different sectors or specific investment goals within the digital asset space.
+
+                Crypto portfolios offer investors the opportunity to diversify their holdings across various digital assets. They might include a mix of well-established cryptocurrencies like Bitcoin and Ethereum, along with tokens representing specific sectors such as decentralized finance (DeFi) or non-fungible tokens (NFTs). The construction of a crypto portfolio typically involves strategic asset allocation, considering factors like risk tolerance, market trends, and investment objectives.
+                
+                Managing a crypto portfolio involves periodic review and potential rebalancing to ensure alignment with market conditions and individual investment goals. This process might involve adding or removing specific assets based on their performance or changing market dynamics. As with any investment, research, and staying informed about the cryptocurrency market are crucial when constructing and managing a crypto portfolio.
+        </p></div>
+        <div class="container12">
+            <div class="image-tag1">Portfolio 1</div>
+            <div class="image1">
+                
+                <img src="https://www.slideteam.net/media/catalog/product/cache/1280x720/i/n/investment_portfolio_pie_charts_showing_stocks_bonds_cash_with_conservative_portfolio_Slide01.jpg" alt="Portfolio 1">
+            </div>
+            
+            <div class="image-tag2">Portfolio 2</div>
+            <div class="image2">
+     
+                <img src="https://www.chainalysis.com/wp-content/uploads/2022/09/chart-1-yoy-region-growth-1024x757.png" alt="Portfolio 2">
+            </div>
+            
+        </div>
+
+    
+
+
+
+
+
+
+
+
+        <footer id="footer">
+            <div class="footer-container">
+                <div class="column left">
+                    <h2> <a href="#navbar"> Top ^ </a></h2>
+                </div>
+                <div class="column center">
+                    <div class="footer-info1">
+                        <hr class="new">
+                    </div>
+                    <div class="footer-info2">
+                        <div class="footer-info-col1">
+                            <h2>TipsTakers</h2>
+                            <p>Tips taker provides data, information & content
+                                for indian stock market, crytpo, mutual funds ,
+                                ETFs & indices </p>
+                                <p>A11 , pragati Appartments,<br>
+                                near dehu phata, Mitaoe, Pune <br>
+                                425508</p>
+                        </div>
+                        <div class="footer-info-col2">
+                            <ul class="footer-info-col2-list">
+                                <li>Assets</li>
+                                <li>Stocks</li>
+                                <li>Mutus Funds</li>
+                                <li>Small cap</li>
+                            </ul>
+                        </div>
+                        <div class="footer-info-col3">
+                            <ul class="footer-info-col3-list">
+                                <li>Tools</li>
+                                <li>MMI</li>
+                                <li>StockScreener</li>
+                                <li>MF Screeener</li>
+                                <li>Stocks Deal</li>
+                            </ul>
+                        </div>
+                        <div class="footer-info-col4">
+                            <ul class="footer-info-col4-list">
+                                <li>Learn&share</li>
+                                <li>Social</li>
+                                <li>Learn</li>
+                                <li>Blog</li>
+                                <li>Glossary</li>
+                              </ul>
+                        </div>
+                        <div class="footer-info-col5">
+                            <ul class="footer-info-col5-list">
+                                <li>Fine prints</li>
+                                <li>Pricing</li>
+                                <li>Disclousure</li>
+                                <li>Term & Condition</li>
+                                <li>Privacy Policy</li>
+                                <li>Analytics & Information Tool</li>
+                                <li>Community Guidelines</li>
+                         </ul>
+                        </div>
+        
+        
+                    </div>
+                    <div class="footer-info3">
+                        <div class="column footer-info3-findus">
+                            <p>Find Us on</p>
+                        </div>
+                        <div class="column footer-info3-support">
+                            <p>Support</p>
+                            <p>Tipstaker@101gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                  </div>
+              </div>
+          </footer>

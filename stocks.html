@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+         header {
+           background-color: #171b22;
+           color: #fff;
+           padding: 15px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           font-family: 'Roboto', sans-serif;
+           margin-left: 25px;
+           margin-right: 25px;
+          margin-top: 7px;
+           
+
+       }
+
+       .header-top {
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           width: 100%;
+       }
+
+       .brand-name {
+           font-size: 44px;
+           font-weight: bold;
+           margin-left: 50px;
+         margin-top: 20px;
+       }
+
+       .search-container {
+           display: flex;
+           align-items: center;
+       }
+
+       .search-bar {
+           width: 500px;
+           height: 20px;
+           padding: 8px;
+           border: none;
+           border-radius: 4px;
+           margin-right: 400px;
+           /* align-item: center; */
+       }
+
+       .profile-icon {
+           width: 60px;
+           height: 30px; 
+           /* border-radius: 30%; */
+           background-color: #fff;
+           margin-right: 50px;
+           margin-top: 20px;
+           color: #000;
+           font-size: 25px;
+       }
+
+       .categories1 {
+           background-color: rgb(215, 211, 206);
+           color: #000;
+           width: 90%;
+           margin-top: 15px;
+           border-radius: 50px;
+           margin-left: 50px;
+           margin-right: 50px;
+       }
+
+
+       .categories {
+           list-style: none;
+           padding-left: 40px;
+           padding-right: 40px;
+           display: flex;
+           height: 10px;
+           margin-top: 10px;
+           flex-direction: row;
+           justify-content: center;
+       }
+
+
+       .categories li {
+           padding-right: 2.8%;
+       }
+       .categories li a {
+           text-decoration: none;
+           color: #000000;
+           border-radius: 15px;
+           margin-right: 20px;
+           background-color:white;
+           display: inline-block;
+           width: 100px;
+           text-align: center;
+          
+          
+       }
+
+
+
+
+       .categories li a:hover {
+           background-color: #565454;
+           color: #fff;
+           transition: background-color 0.3s; 
+           transition: color 0.3s; 
+       }
+
+       
+       #selected {
+           background-color: rgb(6, 6, 6);
+           color: #fff;
+       }
+
+       nav {
+     background-color: #171b22;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     height: 50px;
+   }
+
+   nav ul {
+       margin-top: 10px;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     
+   }
+
+   nav ul li {
+     margin: 0;
+     padding: 0;
+     padding-left: 30px;
+     padding-right: 30px;
+     margin-top:10px ;
+   }
+
+   nav ul li a {
+     display: block;
+     text-decoration: none;
+     color: white;
+     padding: 15px;
+     transition: background-color 0.3s; 
+   }
+
+   nav ul li a:hover {
+     background-color: #fbf9f9; 
+     color: #000000;
+     transition:color 0.3s;
+     transition:background-color 0.3s;
+   }
+   .stocks {
+            /* margin-left: 200px; */
+            font-size: 20px;
+            color: #171b22;
+            margin-right: 200px;
+        }
+        .stocks-heading {
+            font-size: 35px;
+            font-weight: bold;
+            color: #171b22;
+            background-color: beige;
+            width: fit-content;
+            margin-left: 100px;
+
+        }
+        .stocks p{
+            margin-left: 200px;
+        }
+        
+      
+
+        .topgainers{
+            margin-top :30px;
+            /* padding: 20px; */
+            font-size: 35px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+        }
+        .disctopgainers{
+            font-size: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        b{ font-size: 24px;}
+
+        /* table styles */
+        table {
+            /* border-collapse: collapse;
+            width: 80%;
+            background-color: #171b22;
+            /* padding-top: 10px; */
+            /* margin-top: 20px;
+            padding-left: 100px;
+            padding-right: 100px;
+            font-size: 30px; */
+
+            
+
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #171b22;
+        }
+
+        tr:nth-child(even) {
+            background-color: #3a3c3e;
+        }
+         .stock{
+            text-align: left;
+            color: green;
+         }
+         .green{
+            color: green;
+         }
+        
+         #black{
+            color:rgb(255, 251, 251);
+         }
+
+.toplosers{
+    margin-top :30px;
+            /* padding: 20px; */
+            font-size: 35px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+
+}
+.disctoplosers{
+            font-size: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
+        
+    }
+
+         table {
+            border-collapse: collapse;
+            width: 75%;
+            background-color: #171b22;
+            /* padding-top: 10px; */
+            margin-top: 20px;
+            /* padding-left: 100px; */
+            /* padding-right: 100px; */
+            font-size: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
+     
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            color: red;
+        }
+        th{ 
+            color:white;
+            
+        }
+
+        th {
+            background-color: #171b22;
+        }
+
+        td.price {
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #3a3c3e;
+        }
+
+        tr.header-row {
+            color: white;
+        }
+        .left{
+            text-align: left;
+        }
+         .sectors{
+            font-size: 35px;
+            margin-top: 30px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+         }
+         .discsectors{
+            font-size: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
+         /* Style for the container */
+        .image-container {
+            width:75%;
+            margin-top: 20px;
+            /* width: 1320px;
+            height: 700px; */
+            background-color: #171b22;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-left:200px;
+            margin-right: 200px;
+            
+        }
+
+        
+        .centered-image {
+          
+            max-width: 75%;
+            max-height: 75%;
+            display: block;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        /* Style for the labels */
+        .label {
+            position: absolute;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .label-a { font-size: 20px;
+            margin-left: 20px;
+            top: 10px;
+            left: 10px;
+        }
+
+        .label-b {
+            font-size: 20px;
+            margin-right: 20px;
+            top: 20px;
+            right: 20px;
+        }
+
+        .label-c {
+            font-size: 20px;
+            margin-left: 20px;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .label-d {
+            font-size: 20px;
+            margin-right: 20px;
+            bottom: 10px;
+            right: 10px;
+        }
+        .portfolio{
+            margin-left: 100px;
+            font-size: 33px;
+            font-weight: bold;
+            background-color: beige;
+            width:fit-content;
+            margin-top: 15px;
+        }
+        .discportfolio{
+            font-size: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
+        .portfolioimg{
+            margin-top: 30px;
+            margin-left: 0110px;
+            
+           
+            /* width: 100%; */
+
+        }
+        .footer-container{
+            width: 98%;
+            margin: auto;
+           background-color: #171b22;
+           color: white;margin-top: 40px;
+           height: 450px;
+        }
+       
+        .column {
+            float: left;
+            padding: 10px;
+            height: 400px;
+        }
+
+
+        .footer-container:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .left {
+            width: 12%;
+        }
+        .left h2 {
+            margin-top: 5px;
+            margin-left: 12px;
+        }
+
+
+        .center {
+            width: 80%;
+        }
+
+
+        .right {
+            width: 8%;
+        }
+
+
+        hr.new {
+            border: 1.5px solid white;
+            margin-top: 2px;
+        }
+
+
+        .footer-info2 {
+            height: 280px;
+            display: grid;
+            grid-template-columns: 300px 170px 170px 170px 300px;
+        }
+
+
+        .footer-info3 {
+            height: 90px;
+        }
+
+
+        .footer-info3 .column{
+            float: left;
+        }
+
+
+        .footer-info3:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .footer-info3-findus{
+            margin-left: 20px;
+            width: 20%;
+        }
+
+
+        .footer-info3-support{
+            width: 70%;
+        }
+
+
+        .footer-info-col1{
+            font-size: 14px;
+            margin-right: 30px;
+        }
+
+
+        .footer-info-col1 h2{
+            font-size: 30px;
+        }
+
+
+        .footer-info-col2-list, .footer-info-col3-list, .footer-info-col4-list, .footer-info-col5-list{
+            list-style-type: none;
+            font-size: 14px;
+            margin-top: 40px;
+           
+        }
+
+
+        .footer-info-col2-list li, .footer-info-col3-list li, .footer-info-col4-list li, .footer-info-col5-list li{
+           padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header id=navbar>
+        <div class="header-top">
+            <span class="brand-name">Tips Takers</span>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search">
+                <div> <a href="login.html" class="profile-icon"> Login </a></div>
+            </div>
+        </div>
+        <div class="categories1">
+        <ul class="categories">
+            <li  > <a href="home.html" >Home</a></li>
+            <li >  <a href="stocks.html" id="selected"  >stocks</a></li>
+            <li > <a href="MutualF.html">MutualF</a></li>
+            <li > <a href="Indices.html">Indices</a></li>
+            <li > <a href="EFts.html">EFts</a></li>
+            <li > <a href="crypto.html">Crypto</a></li>
+            <li> <a href="#footer">Moreservics</a></li>
+        </ul>
+        </div>
+        <nav>
+            <ul>
+              <li><a href="#topgainers">Top Gainers</a></li>
+              <li><a href="#toplosers" >Top Losers</a></li>
+              <li><a href="#sectors">Sectors</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+          </nav>
+    </header>
+    <div class="stocks">
+        <h1 class="stocks-heading">Stocks</h1>
+        <p><b>Stocks</b> represent ownership in a company. When you buy stocks, you're buying a piece of that company. Stock prices fluctuate based on company performance, market conditions, and investor sentiment. Investing in stocks can offer high returns but also comes with higher risk. There are different types of stocks, and investors can make profits through dividends and by selling stocks at higher prices. Understanding market indexes and conducting research is crucial.</p>
+    </div>
+<div class="topgainers" ID="topgainers" > Top gainers</div>
+<p class="disctopgainers"> <b>Top gainers</b> in the stock market are the companies whose stock prices have shown the most substantial increase within a given period. These stocks experience notable growth due to various factors, such as positive news, strong financial performance, market trends, or other influencing events. Investors keenly track these top performers to identify potential investment opportunities, aiming to capitalize on their upward price movements for potential profits<br>
+    Top gainers in the stock market represent the stocks that have exhibited the most significant price appreciation in a specific timeframe. These companies often experience remarkable growth due to favorable company developments, robust financial performance, changing market dynamics, or other influential catalysts. Investors closely monitor these high-performing stocks to identify emerging trends and potential investment opportunities, leveraging these upward movements for potential gains in their portfolios.<br>
+</p>
+
+<table>
+    <tr>
+        <th class="stock" id="black">Trade</th>
+        <th id="black">Price</th>
+        <th id="black">Change</th>
+        <th id="black">Change %</th>
+    </tr>
+    <tr>
+        <td class="stock" >01 Dunamatech</td>
+        <td id="black">975.70</td>
+        <td class="green">162.60</td>
+        <td class="green">20.00</td>
+    </tr>
+    <tr>
+        <td class="stock">02 Hisarmetal</td>
+        <td id="black">111.00</td>
+        <td class="green">18.40</td>
+        <td class="green">19.87</td>
+    </tr>
+    <tr>
+        <td class="stock">03 Spipll</td>
+        <td id="black">35.70</td>
+        <td class="green">4.90</td>
+        <td class="green">15.82</td>
+    </tr>
+    <tr>
+        <td class="stock">04 Star</td>
+        <td id="black">852.35</td>
+        <td class="green">108.75</td>
+        <td class="green">14.35</td>
+    </tr>
+    <tr>
+        <td class="stock">05 Wabcoindia</td>
+        <td id="black">6390.30</td>
+        <td class="green">747.10</td>
+        <td class="green">13.24</td>
+    </tr>
+    <tr>
+        <td class="stock">06 Sakkar</td>
+        <td id="black">108.30</td>
+        <td class="green">12.45</td>
+        <td class="green">12.99</td>
+    </tr>
+    <tr>
+        <td class="stock">07 Dynpro</td>
+        <td id="black">523.00</td>
+        <td class="green">55.45</td>
+        <td class="green">11.86</td>
+    </tr>
+    <tr>
+        <td class="stock">08 FibIndia</td>
+        <td id="black">1093.85</td>
+        <td class="green">108.10</td>
+        <td class="green">10.97</td>
+    </tr>
+    <tr>
+        <td class="stock">09 Seamecltd</td>
+        <td id="black">499.80</td>
+        <td class="green">41.45</td>
+        <td class="green">10.16</td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align: left;"><a href="#" id="black">See more...</a></td>
+    </tr>
+</table>
+
+
+<div class="toplosers" id="toplosers"> Toplosers </div>
+
+<div class=" disctoplosers"> 
+    <p><b>Top losers </b> in the stock market are companies whose stock prices have experienced significant declines within a specific period. These stocks have shown notable decreases often due to negative news, poor financial performance, market downturns, or other influential factors. Investors closely track these top declining stocks to analyze market trends and potential investment risks, looking to understand the reasons behind the losses and to make informed decisions about their investment strategies.<br>
+        Top losers in the stock market are the companies whose stock values have seen substantial decreases within a given timeframe. These stocks tend to decline due to adverse news, weak financial results, shifts in market conditions, or other impactful events. Investors monitor these underperforming stocks to assess market trends and potential risks, aiming to comprehend the causes behind the downturns and make informed decisions regarding their investment strategies in response to market movements.
+    </p>
+</div>
+<table>
+    <tr class="header-row">
+        <th class="left">Trade</th>
+        <th>Price</th>
+        <th>Change</th>
+        <th>Change %</th>
+    </tr>
+    <tr>
+        <td class="left">Gtl</td>
+        <td class="price">416.85</td>
+        <td>28.20</td>
+        <td>92.00</td>
+    </tr>
+    <tr>
+        <td class="left">Ks oils</td>
+        <td class="price">762</td>
+        <td>176.95</td>
+        <td>87.87</td>
+    </tr>
+    <tr>
+        <td class="left">Lanco Infratech</td>
+        <td class="price">100.49</td>
+        <td>23.65</td>
+        <td>85.82</td>
+    </tr>
+    <tr>
+        <td class="left">Ivrcl</td>
+        <td class="price">302.55</td>
+        <td>73.75</td>
+        <td>78.35</td>
+    </tr>
+    <tr>
+        <td class="left">Jet Airways</td>
+        <td class="price">140.69</td>
+        <td>34.70</td>
+        <td>76.24</td>
+    </tr>
+    <tr>
+        <td class="left">Bajaj Hind</td>
+        <td class="price">725.95</td>
+        <td>179.30</td>
+        <td>76.99</td>
+    </tr>
+    <tr>
+        <td class="left">Patel Engg</td>
+        <td class="price">97.50</td>
+        <td>24.05</td>
+        <td>75.86</td>
+    </tr>
+    <tr>
+        <td class="left">NCC</td>
+        <td class="price">40.65</td>
+        <td>10.10</td>
+        <td>75.97</td>
+    </tr>
+    <tr>
+        <td class="left">BGR Energy</td>
+        <td class="price">66.80</td>
+        <td>17.70</td>
+        <td>73.16</td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align: left;">
+            <a href="#" style="color: white;">See more..</a>
+        </td>
+    </tr>
+</table>
+
+<div class="sectors" id="sectors"> Sectors perfomance </div>
+<div class="discsectors">
+    <p> <b>Sector performance </b>in the stock market refers to the evaluation of how specific industries or sectors are faring concerning their stock prices and overall market trends. Analyzing sector performances allows investors to understand which industries are leading or lagging within a given period, providing insights into the broader market dynamics.
+
+        By assessing sector performances, investors can gauge the strength and weaknesses of different sectors in the economy. Some sectors might outperform others due to various factors such as economic conditions, government policies, technological advancements, consumer trends, or industry-specific news.
+        
+        A strong sector performance might indicate a robust economy, innovative developments, or increasing demand for products or services within that sector. Conversely, a sector with weaker performance might reflect challenges or changing dynamics impacting that industry, such as regulatory changes, declining consumer demand, or shifts in technology.
+        
+        Investors use sector performance analysis to make informed decisions on where to allocate their investments. They may diversify their portfolio by investing in various sectors, aiming to capitalize on sectors with favorable prospects and hedging against risks in underperforming areas.
+        
+        Overall, sector performance analysis provides a detailed view of the market, allowing investors to strategize their investments based on the relative strengths and weaknesses of different industry sectors.</p>
+</div>
+<div class="image-container">
+    <img class="centered-image" src="https://www.researchgate.net/publication/326622532/figure/fig1/AS:653202542317568@1532747030056/Pie-charts-displaying-the-percentage-distribution-of-the-study-population-into-various.png" alt="Image" />
+    <div class="label label-a">A: IT sector</div>
+    <div class="label label-b">B: Banking</div>
+    <div class="label label-c">C: Petroleum<br> and Oil</div>
+    <div class="label label-d">D: FMCG</div>
+</div>
+<div class="portfolio"id=portfolio>
+Portfolio
+</div>
+<div class="discportfolio">
+    <p> <b>A portfolio </b> in the stock market refers to a collection of investments, typically including stocks, bonds, mutual funds, ETFs (exchange-traded funds), and other securities held by an individual, institution, or entity. The primary goal of a portfolio is to manage risk while aiming to achieve specific investment objectives.
+
+        Diversification is a key strategy when building a portfolio. By investing in a variety of assets across different sectors, industries, and geographical regions, investors aim to spread risk. This means that if one investment underperforms, the impact on the overall portfolio might be minimized by the better performance of other investments.
+        
+        The composition of a portfolio is often tailored to an individual's investment goals, risk tolerance, and time horizon. For instance, a long-term investor may focus on growth stocks and take on more risk, while a retiree might prefer a more conservative approach with a larger allocation to fixed-income securities for income and stability.
+        
+        Regular monitoring and periodic adjustments to a portfolio are essential to maintain alignment with investment objectives and changing market conditions. Rebalancing, which involves buying and selling assets to maintain a desired asset allocation, is commonly done to manage risk and returns.
+        
+        The success of a portfolio is often measured by its performance compared to a benchmark or target set by the investor. Factors such as total return, risk-adjusted return, and the portfolio's correlation to the market or other benchmarks are considered in evaluating its performance.
+        
+        Constructing an effective portfolio requires a thoughtful investment strategy, research, and ongoing evaluation to ensure it remains aligned with an investor's financial goals and risk tolerance.</div>
+<div class="portfolioimg">
+
+    <img src="https://freefincal.com/wp-content/uploads/2020/12/My-stock-portfolio-analysis-total-return-22.58-percent-up-to-dec-2020.jpg" style="width: 80%; margin-left: 100px;">
+</div>
+<footer id="footer">
+    <div class="footer-container">
+        <div class="column left">
+            <h2> <a href="#navbar"> Top ^ </a></h2>
+        </div>
+        <div class="column center">
+            <div class="footer-info1">
+                <hr class="new">
+            </div>
+            <div class="footer-info2">
+                <div class="footer-info-col1">
+                    <h2>TipsTakers</h2>
+                    <p>Tips taker provides data, information & content
+                        for indian stock market, crytpo, mutual funds ,
+                        ETFs & indices </p>
+                        <p>A11 , pragati Appartments,<br>
+                        near dehu phata, Mitaoe, Pune <br>
+                        425508</p>
+                </div>
+                <div class="footer-info-col2">
+                    <ul class="footer-info-col2-list">
+                        <li>Assets</li>
+                        <li>Stocks</li>
+                        <li>Mutus Funds</li>
+                        <li>Small cap</li>
+                    </ul>
+                </div>
+                <div class="footer-info-col3">
+                    <ul class="footer-info-col3-list">
+                        <li>Tools</li>
+                        <li>MMI</li>
+                        <li>StockScreener</li>
+                        <li>MF Screeener</li>
+                        <li>Stocks Deal</li>
+                    </ul>
+                </div>
+                <div class="footer-info-col4">
+                    <ul class="footer-info-col4-list">
+                        <li>Learn&share</li>
+                        <li>Social</li>
+                        <li>Learn</li>
+                        <li>Blog</li>
+                        <li>Glossary</li>
+                      </ul>
+                </div>
+                <div class="footer-info-col5">
+                    <ul class="footer-info-col5-list">
+                        <li>Fine prints</li>
+                        <li>Pricing</li>
+                        <li>Disclousure</li>
+                        <li>Term & Condition</li>
+                        <li>Privacy Policy</li>
+                        <li>Analytics & Information Tool</li>
+                        <li>Community Guidelines</li>
+                 </ul>
+                </div>
+
+
+            </div>
+            <div class="footer-info3">
+                <div class="column footer-info3-findus">
+                    <p>Find Us on</p>
+                </div>
+                <div class="column footer-info3-support">
+                    <p>Support</p>
+                    <p>Tipstaker@101gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="column right">
+          </div>
+      </div>
+  </footer>
+</body>
+</html>

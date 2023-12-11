@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ header {
+           background-color: #171b22;
+           color: #fff;
+           padding: 15px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           font-family: 'Roboto', sans-serif;
+           margin-left: 25px;
+           margin-right: 25px;
+          margin-top: 7px;
+           
+
+       }
+
+       .header-top {
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           width: 100%;
+       }
+
+       .brand-name {
+           font-size: 44px;
+           font-weight: bold;
+           margin-left: 50px;
+         margin-top: 20px;
+       }
+
+       .search-container {
+           display: flex;
+           align-items: center;
+       }
+
+       .search-bar {
+           width: 500px;
+           height: 20px;
+           padding: 8px;
+           border: none;
+           border-radius: 4px;
+           margin-right: 400px;
+           /* align-item: center; */
+       }
+
+       .profile-icon {
+           width: 60px;
+           height: 30px; 
+           /* border-radius: 30%; */
+           background-color: #fff;
+           margin-right: 50px;
+           margin-top: 20px;
+           color: #000;
+           font-size: 25px;
+       }
+
+       .categories1 {
+           background-color: rgb(215, 211, 206);
+           color: #000;
+           width: 90%;
+           margin-top: 15px;
+           border-radius: 50px;
+           margin-left: 50px;
+           margin-right: 50px;
+       }
+
+
+       .categories {
+           list-style: none;
+           padding-left: 40px;
+           padding-right: 40px;
+           display: flex;
+           height: 10px;
+           margin-top: 10px;
+           flex-direction: row;
+           justify-content: center;
+       }
+
+
+       .categories li {
+           padding-right: 2.8%;
+       }
+       .categories li a {
+           text-decoration: none;
+           color: #000000;
+           border-radius: 15px;
+           margin-right: 20px;
+           background-color:white;
+           display: inline-block;
+           width: 100px;
+           text-align: center;
+          
+          
+       }
+
+
+
+
+       .categories li a:hover {
+           background-color: #565454;
+           color: #fff;
+           transition: background-color 0.3s; 
+           transition: color 0.3s; 
+       }
+
+       
+       #selected {
+           background-color: rgb(6, 6, 6);
+           color: #fff;
+       }
+
+       nav {
+     background-color: #171b22;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     height: 50px;
+   }
+
+   nav ul {
+       margin-top: 10px;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     
+   }
+
+   nav ul li {
+     margin: 0;
+     padding: 0;
+     padding-left: 30px;
+     padding-right: 30px;
+     margin-top:10px ;
+   }
+
+   nav ul li a {
+     display: block;
+     text-decoration: none;
+     color: white;
+     padding: 15px;
+     transition: background-color 0.3s; 
+   }
+
+   nav ul li a:hover {
+     background-color: #fbf9f9; 
+     color: #000000;
+     transition:color 0.3s;
+     transition:background-color 0.3s;
+   }
+
+   .mutual {
+            /* margin-left: 200px; */
+            font-size: 20px;
+            color: #171b22;
+            margin-right: 200px;
+        }
+        .mutualheading {
+            font-size: 35px;
+            font-weight: bold;
+            color: #171b22;
+            background-color: beige;
+            width: fit-content;
+            margin-left: 100px;
+
+        }
+        .mutual p{
+            margin-left: 200px;
+        }
+        
+
+   .topgainers{
+            margin-top :30px;
+            /* padding: 20px; */
+            font-size: 35px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+            /* margin-bottom: 30px; */
+        }
+        .disctopm{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;
+        }
+        b{
+            font-size: 25px;
+        
+        }
+
+        table {
+             border-collapse: collapse;
+            width: 75%;
+             padding-top: 10px; 
+             margin-top: 20px;
+            /* padding-left: 200px; */
+            padding-right: 100px;
+            font-size: 20px; 
+            margin-left: 200px;
+            background-color: #171b22; 
+            color: #fbf9f9;
+            margin-right: 200px;
+
+            
+
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #171b22;
+        }
+
+        tr:nth-child(even) {
+            background-color: #3a3c3e;
+        }
+         .stock{
+            text-align: left;
+            color: green;
+         }
+         .green{
+            color: green;
+         }
+        
+         #black{
+            color:rgb(255, 251, 251);
+         }
+
+        .toplosers{
+            margin-top :30px;
+            /* padding: 20px; */
+            font-size: 35px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+            /* margin-bottom: 30px; */
+        }
+        .disclosem{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+           
+        }
+        th{ 
+            color:rgb(251, 251, 251);
+            
+        }
+        .left1{
+            width:50%;
+        }
+       .left{
+        color: rgb(252, 0, 0);
+        text-align: left;
+       }
+
+        th {
+            background-color: #171b22;
+        }
+
+      .red3{
+        color: red;
+      }
+      
+        tr:nth-child(even) {
+            background-color: #3a3c3e;
+        }
+
+    
+       
+       
+
+        .sectors{
+            font-size: 35px;
+            margin-top: 30px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+            /* margin-bottom: 30px; */
+         }
+         /* .discsectorm{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;
+        } */
+
+        .container2 {
+            margin-top: 20px;
+            max-width: 70%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            /* gap: 10px; */
+            background-color: #171b22;
+            color: white;
+            padding: 40px;
+            margin-left:200px;
+            margin-right :200px;
+            font-size: 23px;
+
+        }
+
+        .box {
+            border: 1px solid white;
+            padding: 10px;
+            background-color: #3b3939;
+        }
+
+         .container {
+            width: 75%;
+            background-color: #171b22;
+            margin: 0 auto;
+            padding: 0px;
+           margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        .container img {
+            margin-top: 20px;
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+         .portfolio1{
+            margin-left: 100px;
+            font-size: 33px;
+            font-weight: bold;
+            background-color: beige;
+            width:fit-content;
+            margin-top: 30px;
+            /* margin-bottom: 30px; */
+        }
+        .discportfoliom{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;}
+
+        .container1 {
+            width: 100%;
+            background-color: #171b22;
+            margin: 0 auto;
+            /* padding: 20px; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            /* margin-left: 200px;
+            margin-right: 200px; */
+        }
+        .container1 img {
+            margin-top: 20px;
+            width: 80%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+
+
+
+
+   
+
+
+
+
+   
+        .footer-container1{
+            width: 98%;
+            margin: auto;
+           background-color: #171b22;
+           color: white;margin-top: 40px;
+           height: 450px;
+        }
+       
+        .column {
+            float: left;
+            padding: 10px;
+            height: 400px;
+        }
+
+
+        .footer-container:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .left {
+            width: 12%;
+        }
+        .left h2 {
+            margin-top: 5px;
+            margin-left: 12px;
+        }
+
+
+        .center {
+            width: 80%;
+        }
+
+
+        .right {
+            width: 8%;
+        }
+
+
+        hr.new {
+            border: 1.5px solid white;
+            margin-top: 2px;
+        }
+
+
+        .footer-info2 {
+            height: 280px;
+            display: grid;
+            grid-template-columns: 300px 170px 170px 170px 300px;
+        }
+
+
+        .footer-info3 {
+            height: 90px;
+        }
+
+
+        .footer-info3 .column{
+            float: left;
+        }
+
+
+        .footer-info3:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .footer-info3-findus{
+            margin-left: 20px;
+            width: 20%;
+        }
+
+
+        .footer-info3-support{
+            width: 70%;
+        }
+
+
+        .footer-info-col1{
+            font-size: 14px;
+            margin-right: 30px;
+        }
+
+
+        .footer-info-col1 h2{
+            font-size: 30px;
+        }
+
+
+        .footer-info-col2-list, .footer-info-col3-list, .footer-info-col4-list, .footer-info-col5-list{
+            list-style-type: none;
+            font-size: 14px;
+            margin-top: 40px;
+           
+        }
+
+
+        .footer-info-col2-list li, .footer-info-col3-list li, .footer-info-col4-list li, .footer-info-col5-list li{
+           padding: 10px;
+        }
+</Style>
+<body>
+    <header id=navbar>
+        <div class="header-top">
+            <span class="brand-name">Tips Takers</span>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search">
+                <div> <a href="index.html" class="profile-icon"> Login </a></div>
+            </div>
+        </div>
+        <div class="categories1">
+        <ul class="categories">
+            <li  > <a href="home.html" >Home</a></li>
+            <li >  <a href="stocks.html"   >stocks</a></li>
+            <li > <a href="MutualF.html" id="selected">MutualF</a></li>
+            <li > <a href="Indices.html">Indices</a></li>
+            <li > <a href="EFts.html">EFts</a></li>
+            <li > <a href="crypto.html">Crypto</a></li>
+            <li> <a href="#footer">Moreservics</a></li>
+        </ul>
+        </div>
+        <nav>
+            <ul>
+              <li><a href="#topgainers">Top Gainers</a></li>
+              <li><a href="#toplosers" >Top Losers</a></li>
+              <li><a href="#sectors">Sectors</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+          </nav>
+    </header>
+    <div class="mutual">
+        <h1 class="mutualheading">MutualFunds</h1>
+        <p><b> Mutual funds</b> are pooled investments managed by professionals who use the collective money from multiple investors to buy diversified portfolios of stocks, bonds, or other assets. They offer diversification, professional management, and liquidity, making them a convenient way for investors to access the financial markets without the need for individual security selection. Mutual funds pool money from various investors to create diversified portfolios, managed by professional fund managers. These funds offer a range of investment options catering to different objectives and risk levels. They provide convenience, diversification, and the expertise of professional management, making them popular investment choices for those seeking exposure to various markets without the need for direct oversight or extensive market knowledge.</div>
+    <div class="topgainers" ID="topgainers"> Top gainers</div>
+    <div class="disctopm">
+        <p>
+            <b>Top-performing </b>mutual funds deliver better returns compared to their peers or market benchmarks. These funds showcase strong management, effective strategies, and consistent performance over specific periods. They stand out due to their skilled fund managers, strategic approaches, and ability to navigate market cycles while delivering superior results.Top-performing mutual funds are distinguished by their consistent, above-average returns compared to similar funds or market indices. These funds often excel due to skilled fund managers employing effective strategies, robust risk management, and a track record of outperforming benchmarks. Their success stems from a combination of strategic decision-making, in-depth research, and adaptability to market conditions, ultimately providing investors with superior returns over time.
+
+
+
+
+
+
+
+
+
+        </p> 
+
+    </div>
+    <table>
+        <tr>
+            <th class="stock" id="black">Trade</th>
+            <th id="black">Aum (cr)</th>
+            <th id="black">Exp rattio</th>
+            <th id="black">Change %</th>
+        </tr>
+        <tr>
+            <td class="stock" >01 HDFC Small cap</td>
+            <td id="black">23250 </td>
+            <td class="green">0.71</td>
+            <td class="green">41</td>
+        </tr>
+        <tr>
+            <td class="stock">02  Nippon india</td>
+            <td id="black">37375</td>
+            <td class="green">0.71</td>
+            <td class="green"> 44.2</td>
+        </tr>
+        <tr>
+            <td class="stock">03 Quant Small Cap Fund Growth </td>
+            <td id="black">9089</td>
+            <td class="green">0.77</td>
+            <td class="green">45.05</td>
+        </tr>
+        <tr>
+            <td class="stock">04 ICICI Prudential BHARAT</td>
+            <td id="black">282</td>
+            <td class="green">0.08</td>
+            <td class="green">44.22</td>
+        </tr>
+        <tr>
+            <td class="stock">05 HSBC Small Cap</td>
+            <td id="black">11650</td>
+            <td class="green">0.71</td>
+            <td class="green">42.27</td>
+        </tr>
+        <tr>
+            <td class="stock">06 Tata Small Cap Fund</td>
+            <td id="black">6135</td>
+            <td class="green">0.31</td>
+            <td class="green">40.56</td>
+        </tr>
+        <tr>
+            <td class="stock">07 ICICI Prudential Smallcap</td>
+            <td id="black">6054</td>
+            <td class="green">0.73</td>
+            <td class="green">38.19</td>
+        </tr>
+        <tr>
+            <td class="stock">08 Quant Mid Cap Fund Growth</td>
+            <td id="black">3140</td>
+            <td class="green">0.76</td>
+            <td class="green">38.84</td>
+        </tr>
+        <tr>
+            <td class="stock">09 SCanara Robeco Small Cap</td>
+            <td id="black">7814</td>
+            <td class="green">0.41</td>
+            <td class="green">38.47</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: left;"><a href="#" id="black">See more...</a></td>
+        </tr>
+    </table>
+
+
+
+<div class="toplosers" id="toplosers"> Toplosers </div>
+<div class="disclosem">
+    <p>
+        <b>Top losing</b>  mutual funds represent investment options that consistently exhibit poorer performance compared to their peers or market benchmarks over a specified period. These funds have recorded significant declines in their returns, indicating a persistent trend of underperformance that alarms investors and financial analysts.
+
+        Multiple factors contribute to the categorization of a fund as a top loser. Ineffective strategic decisions, poor asset allocation, or a lack of diversification by fund managers can result in subpar returns, leading to the fund's inability to keep pace with the broader market or its competitors.
+        
+        Market conditions and economic factors also significantly impact the fund's underperformance. Economic downturns, market corrections, or unexpected shifts in business cycles can significantly impact a fund's performance. Funds overly exposed to specific sectors or industries facing challenges might experience a decline in value, contributing to their underperformance.
+        
+        Moreover, high-risk investment strategies employed by certain funds may amplify volatility and result in significant losses, categorizing these funds as top losers. Aggressive strategies may generate higher returns in favorable market conditions but can pose increased risk during market downturns, leading to substantial losses.
+
+
+
+
+
+
+    </p> 
+
+</div>
+<table>
+    <tr class="header-row">
+        <th class="left1">Scheme Name</th>
+        <th>AUM (Rs Cr)</th>
+        <th >YTD Return</th>
+        <th >Change %</th>
+    </tr>
+    <tr>
+        <td class="left">HSBC Small Cap Equity Fund</td>
+        <td class="Aum2">298.43</td>
+        <td class="red3">-12.10</td>
+        <td class="red3">19%</td>
+    </tr>
+    <tr>
+        <td class="left">Aditya Birla SL Equity Advantage Fund</td>
+        <td class="Aum2">5,570.52</td>
+        <td class="red3">-11.90</td>
+        <td class="red3">28%</td>
+    </tr>
+    <tr>
+        <td class="left">Axis Focused 25 Fund</td>
+        <td class="Aum2">19,124.22</td>
+        <td class="red3">-11.47</td>
+        <td class="red3">29%</td>
+    </tr>
+    <tr>
+        <td class="left">UTI Flexi Cap Fund</td>
+        <td class="Aum">26,503.19</td>
+        <td class="red3">-9.88</td>
+        <td class="red3">45%</td>
+    </tr>
+    <tr>
+        <td class="left">Axis Long Term Equity Fund</td>
+        <td class="Aum">32,654.14</td>
+        <td class="red3">-9.41</td>
+        <td class="red3">67%</td>
+    </tr>
+    <tr>
+        <td class="left">Invesco India Focused 20 Equity Fund</td>
+        <td class="Aum">1,749.81</td>
+        <td class="red3">-8.74</td>
+        <td class="red3">83%</td>
+    </tr>
+    <tr>
+        <td class="left">Invesco India Tax Plan</td>
+        <td class="Aum">1,902.56</td>
+        <td class="red3">-8.54</td>
+        <td class="red3">72%</td>
+    </tr>
+    <tr>
+        <td class="left">Mirae Asset Focused Fund</td>
+        <td id="Aum">8,992.52</td>
+        <td class="red3">-8.02</td>
+        <td class="red3">87%</td>
+    </tr>
+    <tr>
+        <td class="left">PGIM India Flexi Cap Fund</td>
+        <td class="Aum">5,081.26</td>
+        <td class="red3">-7.71</td>
+        <td class="red3">34%</td>
+    </tr>
+    <tr>
+        <td class="left">Axis Flexi Cap Fund</td>
+        <td class="Aum">11,250.54</td>
+        <td class="red3">-7.22</td>
+        <td class="red3">49%</td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align: left;">
+            <a href="#" style="color: white;">See more..</a>
+        </td>
+    </tr>
+</table>
+
+
+
+
+<div class="sectors" id="sectors"> Sectors perfomance </div>
+<div class="container2">
+    <div class="box">
+        <b>echnology Sector:</b>  Technology funds primarily invest in companies engaged in technology-related businesses, such as software, hardware, and telecommunications. These funds can perform well during periods of technological innovation and high demand for tech products and services.
+    </div>
+    <div class="box">
+        <b>Healthcare Sector: </b> Healthcare funds focus on companies within the healthcare and pharmaceutical industries. Performance often correlates with factors like advancements in medical technology, drug development, and changes in healthcare regulations.
+    </div>
+    <div class="box">
+        <b> Consumer Discretionary Sector:</b>  These funds invest in companies offering non-essential goods and services. Performance may fluctuate with consumer spending patterns and economic conditions.
+    </div>
+    <div class="box">
+        <b> Financial Sector:</b>  Financial funds include banks, insurance companies, and financial service providers. Their performance is influenced by interest rates, regulatory changes, and economic stability.
+    </div>
+    <div class="box">
+        <b> Energy Sector:</b>  Funds in this sector invest in companies involved in oil, gas, and renewable energy. Performance often fluctuates with energy prices, geopolitical events, and shifts in energy policies.
+    </div>
+    <div class="box">
+        <b> Consumer Staples Sector:</b>  These funds invest in companies offering essential household products. Performance is often steadier, less volatile, and can be less affected by economic cycles.
+    </div>
+    <div class="box">
+        <b> Industrial Sector:</b>  Industrial funds invest in manufacturing, construction, and engineering companies. Performance depends on economic growth, global trade, and infrastructure spending.
+    </div>
+    <div class="box">
+        <b>Real Estate Sector:</b>  Real estate funds primarily invest in property-related assets. Their performance is linked to real estate market conditions, interest rates, and economic growth.
+    </div>
+    <div class="box">
+        <b>Utilities Sector:</b>  Utility funds include companies providing essential services such as water, gas, and electricity. Their performance can be influenced by regulatory changes and interest rates.
+    </div>
+    <div class="box">
+       <b>Materials Sector: </b> Materials funds focus on companies involved in producing raw materials like chemicals, metals, and forestry products. Performance often mirrors global demand, commodity prices, and supply-demand dynamics.
+    </div>
+</div>
+
+
+<div class="container">
+    <img src="https://realinvestmentadvice.com/wp-content/uploads/2023/01/image-79.png" alt="Image 1">
+    <img src="https://images.moneycontrol.com/static-mcnews/2022/12/1page-2.jpg" alt="Image 2">
+</div>
+
+<div class="portfolio1"id=portfolio>
+Portfolio
+</div>
+<div class="discportfoliom">
+    <p>
+        <b> Mutual fund portfolio</b>  A is a collection of various assets managed by financial experts to achieve specific investment objectives. It aims to diversify investments, reducing risk by spreading across various securities like stocks, bonds, or other assets. There are different types of mutual funds—equity, fixed-income, balanced, index, global, and specialty funds. The fund's manager makes investment decisions, aiming for returns while managing risk. Investors should consider expenses, past performance, and their own financial goals and risk tolerance before investing in a mutual fund.
+
+
+
+    </p> 
+
+<div class="container1">
+    <img src="https://s.wsj.net/public/resources/images/BF-AH115_CITI_G_20140328180304.jpg" alt="Image 1">
+    <img src="https://img.etimg.com/photo/msid-79348465/mutual-funds.jpg" alt="Image 2">
+</div>
+
+
+
+
+
+    <footer id="footer">
+        <div class="footer-container1">
+            <div class="column left">
+                <h2> <a href="#navbar"> Top ^ </a></h2>
+            </div>
+            <div class="column center">
+                <div class="footer-info1">
+                    <hr class="new">
+                </div>
+                <div class="footer-info2">
+                    <div class="footer-info-col1">
+                        <h2>TipsTakers</h2>
+                        <p>Tips taker provides data, information & content
+                            for indian stock market, crytpo, mutual funds ,
+                            ETFs & indices </p>
+                            <p>A11 , pragati Appartments,<br>
+                            near dehu phata, Mitaoe, Pune <br>
+                            425508</p>
+                    </div>
+                    <div class="footer-info-col2">
+                        <ul class="footer-info-col2-list">
+                            <li>Assets</li>
+                            <li>Stocks</li>
+                            <li>Mutus Funds</li>
+                            <li>Small cap</li>
+                        </ul>
+                    </div>
+                    <div class="footer-info-col3">
+                        <ul class="footer-info-col3-list">
+                            <li>Tools</li>
+                            <li>MMI</li>
+                            <li>StockScreener</li>
+                            <li>MF Screeener</li>
+                            <li>Stocks Deal</li>
+                        </ul>
+                    </div>
+                    <div class="footer-info-col4">
+                        <ul class="footer-info-col4-list">
+                            <li>Learn&share</li>
+                            <li>Social</li>
+                            <li>Learn</li>
+                            <li>Blog</li>
+                            <li>Glossary</li>
+                          </ul>
+                    </div>
+                    <div class="footer-info-col5">
+                        <ul class="footer-info-col5-list">
+                            <li>Fine prints</li>
+                            <li>Pricing</li>
+                            <li>Disclousure</li>
+                            <li>Term & Condition</li>
+                            <li>Privacy Policy</li>
+                            <li>Analytics & Information Tool</li>
+                            <li>Community Guidelines</li>
+                     </ul>
+                    </div>
+    
+    
+                </div>
+                <div class="footer-info3">
+                    <div class="column footer-info3-findus">
+                        <p>Find Us on</p>
+                    </div>
+                    <div class="column footer-info3-support">
+                        <p>Support</p>
+                        <p>Tipstaker@101gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column right">
+              </div>
+          </div>
+      </footer>
+    
+</body>
+</html>

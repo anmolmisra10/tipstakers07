@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ header {
+           background-color: #171b22;
+           color: #fff;
+           padding: 15px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           font-family: 'Roboto', sans-serif;
+           margin-left: 25px;
+           margin-right: 25px;
+          margin-top: 7px;
+           
+
+       }
+
+       .header-top {
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           width: 100%;
+       }
+
+       .brand-name {
+           font-size: 44px;
+           font-weight: bold;
+           margin-left: 50px;
+         margin-top: 20px;
+       }
+
+       .search-container {
+           display: flex;
+           align-items: center;
+       }
+
+       .search-bar {
+           width: 500px;
+           height: 20px;
+           padding: 8px;
+           border: none;
+           border-radius: 4px;
+           margin-right: 400px;
+           /* align-item: center; */
+       }
+
+       .profile-icon {
+           width: 60px;
+           height: 30px; 
+           /* border-radius: 30%; */
+           background-color: #fff;
+           margin-right: 50px;
+           margin-top: 20px;
+           color: #000;
+           font-size: 25px;
+       }
+
+       .categories1 {
+           background-color: rgb(215, 211, 206);
+           color: #000;
+           width: 90%;
+           margin-top: 15px;
+           border-radius: 50px;
+           margin-left: 50px;
+           margin-right: 50px;
+       }
+
+
+       .categories {
+           list-style: none;
+           padding-left: 40px;
+           padding-right: 40px;
+           display: flex;
+           height: 10px;
+           margin-top: 10px;
+           flex-direction: row;
+           justify-content: center;
+       }
+
+
+       .categories li {
+           padding-right: 2.8%;
+       }
+       .categories li a {
+           text-decoration: none;
+           color: #000000;
+           border-radius: 15px;
+           margin-right: 20px;
+           background-color:white;
+           display: inline-block;
+           width: 100px;
+           text-align: center;
+          
+          
+       }
+
+
+
+
+       .categories li a:hover {
+           background-color: #565454;
+           color: #fff;
+           transition: background-color 0.3s; 
+           transition: color 0.3s; 
+       }
+
+       
+       #selected {
+           background-color: rgb(6, 6, 6);
+           color: #fff;
+       }
+
+       nav {
+     background-color: #171b22;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     height: 50px;
+   }
+
+   nav ul {
+       margin-top: 10px;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     
+   }
+
+   nav ul li {
+     margin: 0;
+     padding: 0;
+     padding-left: 30px;
+     padding-right: 30px;
+     margin-top:10px ;
+   }
+
+   nav ul li a {
+     display: block;
+     text-decoration: none;
+     color: white;
+     padding: 15px;
+     transition: background-color 0.3s; 
+   }
+
+   nav ul li a:hover {
+     background-color: #fbf9f9; 
+     color: #000000;
+     transition:color 0.3s;
+     transition:background-color 0.3s;
+   }
+
+   .Indices {
+            /* margin-left: 200px; */
+            font-size: 20px;
+            color: #171b22;
+            margin-right: 200px;
+        }
+        .Indicesheading {
+            font-size: 35px;
+            font-weight: bold;
+            color: #171b22;
+            background-color: beige;
+            width: fit-content;
+            margin-left: 100px;
+
+        }
+        .Indices p{
+            margin-left: 200px;
+        }
+   .topgainers{
+            margin-top :30px;
+            /* padding: 20px; */
+            font-size: 35px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+            /* margin-bottom: 30px; */
+        }
+        .disctopI{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;
+        }
+        table {
+             border-collapse: collapse;
+            width: 75%;
+             padding-top: 10px; 
+             margin-top: 20px;
+            /* padding-left: 200px; */
+            padding-right: 100px;
+            font-size: 20px; 
+            margin-left: 200px;
+            background-color: #171b22; 
+
+            
+
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #171b22;
+        }
+
+        tr:nth-child(even) {
+            background-color: #3a3c3e;
+        }
+         .stock{
+            text-align: left;
+            color: green;
+         }
+         .green{
+            color: green;
+         }
+        
+         #black{
+            color:rgb(255, 251, 251);
+         }
+
+        .toplosers{
+            margin-top :30px;
+            /* padding: 20px; */
+            font-size: 35px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+            /* margin-bottom: 30px; */
+        }
+
+        .discloseI{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;
+        }
+
+
+
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            color: red;
+        }
+        th{ 
+            color:white;
+            
+        }
+
+        th {
+            background-color: #171b22;
+        }
+
+        td.price {
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #3a3c3e;
+        }
+
+        tr.header-row {
+            color: white;
+        }
+        .left{
+            text-align: left;
+            width: 50px;
+        }
+
+        .sectors{
+            font-size: 35px;
+            margin-top: 30px;
+            margin-left: 100px;
+            background-color: beige;
+            width:fit-content;
+            font-weight: bold;
+            /* margin-bottom: 30px; */
+         }
+         .discsectorsI{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;
+        }
+
+         .image-container {
+            background-color: #171b22;
+            width: 75%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;margin-top: 20px;
+        }
+        .image {
+            margin-top: 20px;
+            width: 80%;
+            margin-bottom: 20px;}
+
+
+         .portfolio1{
+            margin-left: 100px;
+            font-size: 33px;
+            font-weight: bold;
+            background-color: beige;
+            width:fit-content;
+            margin-top: 30px;
+            /* margin-bottom: 30px; */
+        }
+        .discportfolio{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;
+        }
+.image-container1 {
+            background-color: #171b22;
+            width: 75%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;margin-top: 20px;
+        }
+        .image1 {
+            margin-top: 20px;
+            width: 80%;
+            margin-bottom: 20px;}
+
+
+
+
+
+   
+
+
+
+
+     
+        .footer-container{
+            width: 98%;
+            margin: auto;
+           background-color: #171b22;
+           color: white;margin-top: 40px;
+           height: 450px;
+        }
+       
+        .column {
+            float: left;
+            padding: 10px;
+            height: 400px;
+        }
+
+
+        .footer-container:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .left {
+            width: 12%;
+        }
+        .left h2 {
+            margin-top: 5px;
+            margin-left: 12px;
+        }
+
+
+        .center {
+            width: 80%;
+        }
+
+
+        .right {
+            width: 8%;
+        }
+
+
+        hr.new {
+            border: 1.5px solid white;
+            margin-top: 2px;
+        }
+
+
+        .footer-info2 {
+            height: 280px;
+            display: grid;
+            grid-template-columns: 300px 170px 170px 170px 300px;
+        }
+
+
+        .footer-info3 {
+            height: 90px;
+        }
+
+
+        .footer-info3 .column{
+            float: left;
+        }
+
+
+        .footer-info3:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .footer-info3-findus{
+            margin-left: 20px;
+            width: 20%;
+        }
+
+
+        .footer-info3-support{
+            width: 70%;
+        }
+
+
+        .footer-info-col1{
+            font-size: 14px;
+            margin-right: 30px;
+        }
+
+
+        .footer-info-col1 h2{
+            font-size: 30px;
+        }
+
+
+        .footer-info-col2-list, .footer-info-col3-list, .footer-info-col4-list, .footer-info-col5-list{
+            list-style-type: none;
+            font-size: 14px;
+            margin-top: 40px;
+           
+        }
+
+
+        .footer-info-col2-list li, .footer-info-col3-list li, .footer-info-col4-list li, .footer-info-col5-list li{
+           padding: 10px;
+        }
+</Style>
+<body>
+    <header id=navbar>
+        <div class="header-top">
+            <span class="brand-name">Tips Takers</span>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search">
+                <div> <a href="index.html" class="profile-icon"> Login </a></div>
+            </div>
+        </div>
+        <div class="categories1">
+        <ul class="categories">
+            <li  > <a href="home.html" >Home</a></li>
+            <li >  <a href="stocks.html"   >stocks</a></li>
+            <li > <a href="MutualF.html" >MutualF</a></li>
+            <li > <a href="Indices.html" id="selected">Indices</a></li>
+            <li > <a href="EFts.html">EFts</a></li>
+            <li > <a href="crypto.html">Crypto</a></li>
+            <li> <a href="#footer">Moreservics</a></li>
+        </ul>
+        </div>
+        <nav>
+            <ul>
+              <li><a href="#topgainers">Top Gainers</a></li>
+              <li><a href="#toplosers" >Top Losers</a></li>
+              <li><a href="#sectors">Sectors</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+          </nav>
+    </header>
+    <div class="Indices">
+        <h1 class="Indicesheading">Indices</h1>
+         <p>BSE Sensex: Comprising 30 established companies on the Bombay Stock Exchange.<br>
+            Nifty 50: Consisting of 50 large, liquid companies on the National Stock Exchange.<br>
+            Nifty Bank: Focused on major banking sector stocks within the Nifty 50.<br>
+            Nifty Next 50: Following the next set of 50 companies after Nifty 50 in market capitalization.<br>
+            BSE MidCap and BSE SmallCap: Representing mid-sized and smaller companies on the BSE.<br>
+            Sectoral Indices: Reflecting specific sectors like IT, FMCG, energy, etc.<br>
+            These indices help track market performance, sectors, and serve as benchmarks for investments in the Indian stock market.<br>
+            
+        </p></div>
+            
+            
+            
+
+    <div class="topgainers" ID="topgainers"> Top gainers</div>
+    <div class="disctopI">
+        <p>
+            <b>Top gainers </b>in stock market indices, such as BSE Sensex or Nifty 50, are the companies whose stock prices have experienced substantial increases within a specific period. Investors closely watch these top gainers as they often signify strong market performance and potential for higher returns. The reasons for these stock price surges can vary, including positive company announcements, robust financial results, favorable industry trends, or increased investor interest.
+
+            The impact of top gainers goes beyond individual stocks; their performance affects the overall index value. When multiple key companies within an index show significant gains, it positively influences the index value, reflecting overall market sentiment. However, these stocks can be more volatile, susceptible to sudden price fluctuations, and might carry higher risks due to their rapid growth.
+
+
+
+
+
+
+
+        </p> 
+
+
+    </div>
+    <table>
+        <tr>
+            <th class="stock" id="black">Trade</th>
+            <th id="black">Price</th>
+            <th id="black">Change</th>
+            <th id="black">Change %</th>
+        </tr>
+        <tr>
+            <td class="stock" >01 Britannia</td>
+            <td id="black">4,397.30</td>
+            <td class="green">129.95</td>
+            <td class="green">2.96</td>
+        </tr>
+        <tr>
+            <td class="stock">02 Hindalco </td>
+            <td id="black">462.70</td>
+            <td class="green">11.50</td>
+            <td class="green">12.49</td>
+        </tr>
+        <tr>
+            <td class="stock">03 IndusInd Bank </td>
+            <td id="black">1,432.60</td>
+            <td class="green">28.60</td>
+            <td class="green">2.00</td>
+        </tr>
+        <tr>
+            <td class="stock">04 Apollo Hospital </td>
+            <td id="black">4,796.55</td>
+            <td class="green">190.45</td>
+            <td class="green">1.89</td>
+        </tr>
+        <tr>
+            <td class="stock">05 Eicher Motors </td>
+            <td id="black">3,282.2</td>
+            <td class="green">56.05</td>
+            <td class="green">1.71</td>
+        </tr>
+        <tr>
+            <td class="stock">06 UPL </td>
+            <td id="black">532.05</td>
+            <td class="green">8.7</td>
+            <td class="green">1.64</td>
+        </tr>
+        <tr>
+            <td class="stock">07 Grasim</td>
+            <td id="black">1,868.55</td>
+            <td class="green">29.20</td>
+            <td class="green">1.56</td>
+        </tr>
+        <tr>
+            <td class="stock">08 Sun Pharma </td>
+            <td id="black">11,116.20</td>
+            <td class="green">1.49</td>
+            <td class="green">7.39</td>
+        </tr>
+        <tr>
+            <td class="stock">09 Tata Motors</td>
+            <td id="black">4627.70</td>
+            <td class="green">8.75</td>
+            <td class="green">1.39</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: left;"><a href="#" id="black">See more...</a></td>
+        </tr>
+    </table>
+
+
+
+<div class="toplosers" id="toplosers"> Toplosers </div>
+<div class="discloseI">
+    <p>
+       The term <b> "top loser"</b> in stock market indices refers to companies or stocks within an index that have experienced significant declines in their share prices over a specific period. These stocks are the opposite of top gainers and might attract attention due to their poor performance. When key companies within an index undergo substantial decreases in their stock prices, it can negatively impact the overall index value.
+
+        Here are some key points regarding top losers in indices:
+        
+        Market Impact: Stocks that experience significant declines can negatively affect the overall index performance. If several major companies in an index are performing poorly, it can lead to a decrease in the index value.
+        
+        Volatility: Just like top gainers, top losers might face higher volatility due to significant price drops in a short period. This volatility can be due to various reasons such as poor financial results, negative company news, market sentiment, or industry-specific issues.
+
+
+
+
+
+
+
+
+    </p> 
+
+</div>
+<table>
+    <tr class="header-row">
+        <th class="left">Trade</th>
+        <th>Price</th>
+        <th>Change</th>
+        <th>Change %</th>
+    </tr>
+    <tr>
+        <td class="left">01 Hero Motocorp</td>
+        <td class="price">3,092.45</td>
+        <td>-40.35</td>
+        <td>-1.30</td>
+    </tr>
+    <tr>
+        <td class="left">02 Tech Mahindra </td>
+        <td class="price">1,125.10</td>
+        <td>-9.60</td>
+        <td>-0.85</td>
+    </tr>
+    <tr>
+        <td class="left">03 Bajaj Auto </td>
+        <td class="price">5,344.3</td>
+        <td>-25.95</td>
+        <td>8-0.49</td>
+    </tr>
+    <tr>
+        <td class="left">Bajaj Finance </td>
+        <td class="price">7,471.90</td>
+        <td>-22.80</td>
+        <td>-0.35</td>
+    </tr>
+    <tr>
+        <td class="left">ONGC </td>
+        <td class="price">186.70</td>
+        <td>-0.50</td>
+        <td>-0.27</td>
+    </tr>
+    <tr>
+        <td class="left">Dr Reddys Labs </td>
+        <td class="price">5,346.45</td>
+        <td> -7.95</td>
+        <td>-0.15</td>
+    </tr>
+    <tr>
+        <td class="left">HDFC Life </td>
+        <td class="price">620.05</td>
+        <td>-0.75</td>
+        <td>-0.12</td>
+    </tr>
+    <tr>
+        <td class="left">NCC</td>
+        <td class="price">2,217.30</td>
+        <td>1-2.00</td>
+        <td>-0.09</td>
+    </tr>
+    <tr>
+        <td class="left">Divis Labs </td>
+        <td class="price">3,346.05</td>
+        <td>-2.35</td>
+        <td>-0.07</td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align: left;">
+            <a href="#" style="color: white;">See more..</a>
+        </td>
+    </tr>
+</table>
+
+
+
+
+<div class="sectors" id="sectors"> Sectors perfomance </div>
+<div class="discsectorsI">
+    <p>
+        <b> Representation:</b>  Sector indices track the performance of companies within a particular industry. For instance, the technology sector index includes tech-related companies.<br>
+        <br>
+        <b> Diversification:</b>    Investing in sector indices allows diversification, reducing risk by spreading investments across different industries. It also enables investors to target specific sectors they believe will perform well.<br>
+        <br>
+        <b> Benchmarking:</b>   Sector indices act as benchmarks to measure the performance of investments or funds specializing in a particular industry.<br>
+        <br>
+        <b> Market Insights:</b>  The performance of sector indices offers insights into the health and trends of specific industries, reflecting changes in market sentiment and economic conditions.<br>
+        <br>
+        <b> Influence on Overall Indices:</b>   As these sectors constitute part of broader indices like the BSE Sensex or Nifty 50, their performance impacts the overall index value. For example, strong performance in the technology sector can positively influence a market index.<br>
+
+
+
+
+
+
+
+
+    </p> 
+
+</div>
+
+<div class="image-container">
+    <img class="image" src="https://jhunjhunwalas.files.wordpress.com/2015/01/bse-indices1.jpg" alt="First Image">
+    <img class="image" src="https://images.moneycontrol.com/static-mcnews/2022/12/Sectoral-index-2712.jpg" alt="Second Image">
+    <img class="image" src="https://wp-public-fs.s3.ap-south-1.amazonaws.com/tasks/16182894878315e713ee0e3c6179b47e0bcd5e2eaa55d2/images/nifty-market-cap-as-of-to-618e716106dad.png" alt="Third Image">
+</div>
+
+<div class="portfolio1"id=portfolio>
+Portfolio
+</div>
+<div class="discportfolio">
+    <p>
+        <b> Risk Management: </b>  Index portfolios inherently offer risk management through diversification. By investing in multiple stocks within an index, they spread risk across various sectors and companies, reducing the impact of underperformance of any single stock.<br>
+       
+        <br> <b> Consistency:</b> These portfolios aim to consistently replicate the performance of the chosen index. This consistency is beneficial for investors seeking stability and a long-term investment strategy.
+        <br>
+        <br> <b>Broad Market Exposure: </b> Investing in an index portfolio provides exposure to the entire market or a specific segment of it. This exposure reflects the market's overall performance or the performance of a particular industry.
+        <br>
+        <br> <b> Passive vs. Active Management:</b> Index portfolios follow a passive investment strategy, aiming to match the index's performance, in contrast to actively managed portfolios where fund managers actively buy and sell assets to outperform the market.
+        <br>
+        <br> <b> Cost Efficiency:</b> Due to lower management fees associated with index funds or ETFs, index portfolios are cost-effective. This aspect is attractive to investors seeking to minimize costs and maximize returns.
+        <br>
+        <br> <b> Benchmarking Tool:</b> Investors use index portfolios as benchmarks to compare the performance of actively managed portfolios or individual stock investments against the overall market.
+        <br>
+        <br> <b>Market Trends and Analysis: </b> By observing the performance of various indices and their respective portfolios, investors can gain insights into market trends, industry performance, and economic conditions.
+        <br>
+
+
+
+
+
+
+
+    </p> 
+
+</div>
+
+
+<div class="image-container1">
+    <img class="image1" src="https://ars.els-cdn.com/content/image/1-s2.0-S2772662222000042-gr4.jpg" alt="First Image">
+    </div>
+
+
+
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="column left">
+                <h2> <a href="#navbar"> Top ^ </a></h2>
+            </div>
+            <div class="column center">
+                <div class="footer-info1">
+                    <hr class="new">
+                </div>
+                <div class="footer-info2">
+                    <div class="footer-info-col1">
+                        <h2>TipsTakers</h2>
+                        <p>Tips taker provides data, information & content
+                            for indian stock market, crytpo, mutual funds ,
+                            ETFs & indices </p>
+                            <p>A11 , pragati Appartments,<br>
+                            near dehu phata, Mitaoe, Pune <br>
+                            425508</p>
+                    </div>
+                    <div class="footer-info-col2">
+                        <ul class="footer-info-col2-list">
+                            <li>Assets</li>
+                            <li>Stocks</li>
+                            <li>Mutus Funds</li>
+                            <li>Small cap</li>
+                        </ul>
+                    </div>
+                    <div class="footer-info-col3">
+                        <ul class="footer-info-col3-list">
+                            <li>Tools</li>
+                            <li>MMI</li>
+                            <li>StockScreener</li>
+                            <li>MF Screeener</li>
+                            <li>Stocks Deal</li>
+                        </ul>
+                    </div>
+                    <div class="footer-info-col4">
+                        <ul class="footer-info-col4-list">
+                            <li>Learn&share</li>
+                            <li>Social</li>
+                            <li>Learn</li>
+                            <li>Blog</li>
+                            <li>Glossary</li>
+                          </ul>
+                    </div>
+                    <div class="footer-info-col5">
+                        <ul class="footer-info-col5-list">
+                            <li>Fine prints</li>
+                            <li>Pricing</li>
+                            <li>Disclousure</li>
+                            <li>Term & Condition</li>
+                            <li>Privacy Policy</li>
+                            <li>Analytics & Information Tool</li>
+                            <li>Community Guidelines</li>
+                     </ul>
+                    </div>
+    
+    
+                </div>
+                <div class="footer-info3">
+                    <div class="column footer-info3-findus">
+                        <p>Find Us on</p>
+                    </div>
+                    <div class="column footer-info3-support">
+                        <p>Support</p>
+                        <p>Tipstaker@101gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column right">
+              </div>
+          </div>
+      </footer>
+    
+</body>
+</html>
